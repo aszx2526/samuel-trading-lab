@@ -11,9 +11,8 @@
 
   // ← 改成你的實際連結（沒有的先留 "#"）
   var SOCIAL = {
-    threads: "#",
-    youtube: "#",
-    live: "#"
+    threads: "https://www.threads.com/@tsaitsungying1990",
+    youtube: "https://www.youtube.com/@UncelSamuel1990"
   };
 
   function esc(s) {
