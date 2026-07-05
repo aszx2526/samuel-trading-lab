@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>24H 必勝閉環｜每日行動系統</title>
+<style>
+:root{
+  --bg:#0b1020; --panel:#141b31; --panel2:#0f1730; --line:rgba(255,255,255,.11);
+  --txt:#edf2ff; --muted:#a8b2d5; --accent:#7c9cff; --accent2:#66dfbd; --warn:#ffc76d;
+  --danger:#ff7986; --shadow:0 18px 40px rgba(0,0,0,.28); --radius:20px;
+}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif;background:
+radial-gradient(900px 500px at 90% -10%,rgba(124,156,255,.23),transparent 58%),
+radial-gradient(700px 450px at -10% 28%,rgba(102,223,189,.12),transparent 60%),var(--bg);color:var(--txt);line-height:1.55}
+button,input,textarea,select{font:inherit} button{cursor:pointer}.wrap{max-width:1180px;margin:auto;padding:30px 20px 70px}
+.hero{display:grid;grid-template-columns:1.35fr .65fr;gap:18px;align-items:stretch;margin-bottom:20px}
+.hero-card,.stat-card,.card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(25,34,62,.98),rgba(15,23,48,.94));box-shadow:var(--shadow);border-radius:var(--radius)}
+.hero-card{padding:28px}.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2);font-weight:800}.hero h1{font-size:clamp(30px,5vw,54px);line-height:1.05;margin:10px 0 14px;letter-spacing:-.045em}.hero p{color:var(--muted);max-width:720px;margin:0}
+.stat-card{padding:22px;display:flex;flex-direction:column;justify-content:center}.stat-label{color:var(--muted);font-size:13px}.stat-num{font-size:46px;font-weight:850;letter-spacing:-.06em;margin-top:3px}.stat-note{color:var(--accent2);font-size:13px;margin-top:4px}
+.progress{height:10px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin-top:16px}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:.3s}
+.nav{position:sticky;top:10px;z-index:10;background:rgba(11,16,32,.78);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:14px;padding:8px;display:flex;gap:7px;overflow:auto;margin-bottom:20px}
+.nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:9px 12px;border-radius:10px;font-size:14px}.nav a:hover{color:var(--txt);background:rgba(255,255,255,.07)}
+.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.card{padding:22px;margin-bottom:18px}.card h2{font-size:19px;margin:0 0 4px;letter-spacing:-.02em}.sub{color:var(--muted);font-size:14px;margin:0 0 18px}.tag{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:999px;background:rgba(124,156,255,.12);border:1px solid rgba(124,156,255,.25);color:#c7d2ff;font-size:12px;font-weight:750;margin-bottom:10px}
+label{display:block;font-size:13px;font-weight:750;margin:14px 0 6px;color:#dbe3ff}input,textarea,select{width:100%;border:1px solid var(--line);border-radius:12px;color:var(--txt);background:rgba(1,5,16,.3);outline:none;padding:11px 12px;transition:.2s}textarea{resize:vertical;min-height:80px}input:focus,textarea:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(124,156,255,.16)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.small{font-size:12px;color:var(--muted);margin:5px 0 0}.template-row{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 12px}.chip{border:1px solid rgba(124,156,255,.3);background:rgba(124,156,255,.08);color:#d7dfff;padding:7px 10px;border-radius:999px;font-size:12px}.chip:hover{background:rgba(124,156,255,.2)}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.btn{border:0;border-radius:12px;padding:11px 15px;font-weight:800;background:linear-gradient(135deg,var(--accent),#a281ff);color:white}.btn.secondary{background:rgba(255,255,255,.08);border:1px solid var(--line);color:var(--txt)}.btn.success{background:linear-gradient(135deg,#37bd9b,var(--accent2));color:#09231d}.btn.warn{background:rgba(255,199,109,.13);border:1px solid rgba(255,199,109,.35);color:#ffda95}
+.checklist{display:grid;gap:9px}.check{display:flex;align-items:flex-start;gap:10px;border:1px solid var(--line);background:rgba(255,255,255,.025);padding:11px;border-radius:12px}.check input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--accent2)}.check strong{display:block;font-size:14px}.check span{display:block;font-size:12px;color:var(--muted);margin-top:1px}.timer{border:1px solid rgba(102,223,189,.25);background:linear-gradient(135deg,rgba(102,223,189,.14),rgba(124,156,255,.1));border-radius:16px;padding:18px;text-align:center;margin-top:16px}.timer #clock{font-size:42px;font-weight:900;letter-spacing:-.06em}.timer .small{margin:0 0 8px}
+.mit-box{border:1px solid rgba(102,223,189,.35);background:rgba(102,223,189,.08);border-radius:16px;padding:16px;margin-top:15px}.mit-label{font-size:12px;color:var(--accent2);font-weight:850;letter-spacing:.08em}.mit-text{font-size:18px;font-weight:850;margin-top:5px;word-break:break-word}.empty{color:var(--muted);font-weight:500}
+.note{border-left:3px solid var(--warn);padding:8px 12px;background:rgba(255,199,109,.08);font-size:13px;color:#ffe2a8;border-radius:0 10px 10px 0}.history{display:grid;gap:9px;margin-top:12px}.history-item{padding:12px;border-radius:12px;background:rgba(255,255,255,.035);border:1px solid var(--line)}.history-item b{font-size:14px}.history-item div{font-size:12px;color:var(--muted);margin-top:3px}.hide{display:none}.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(100px);opacity:0;background:#eaf0ff;color:#11172d;border-radius:999px;padding:10px 16px;font-weight:750;box-shadow:0 10px 30px rgba(0,0,0,.3);transition:.28s;z-index:30}.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+footer{color:var(--muted);text-align:center;font-size:12px;margin-top:22px}.divider{height:1px;background:var(--line);margin:18px 0}
+@media(max-width:820px){.hero,.grid{grid-template-columns:1fr}.hero-card{padding:23px}.stat-card{padding:18px}.row{grid-template-columns:1fr}.wrap{padding:16px 13px 48px}.card{padding:17px}.hero h1{font-size:34px}.timer #clock{font-size:38px}}
+</style>
+
+<style id="stl-shell">
+.stl-toolbar{position:sticky;top:0;z-index:9999;background:rgba(7,17,31,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(184,211,255,.16);font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif}
+.stl-toolbar .stl-in{width:min(1180px,calc(100% - 32px));margin:auto;display:flex;align-items:center;gap:12px;padding:10px 0}
+.stl-toolbar a.stl-back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#edf5ff;font-weight:800;font-size:.9rem;min-height:40px}
+.stl-toolbar a.stl-back:hover{color:#63e6bd}
+.stl-toolbar .stl-lab{margin-left:auto;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.74rem;color:#a7b8d3;letter-spacing:.04em}
+.stl-wrap-out{width:min(1180px,calc(100% - 32px));margin:36px auto 60px;font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif}
+.stl-note{border:1px solid rgba(184,211,255,.16);background:rgba(4,11,23,.35);border-radius:14px;padding:14px 16px;color:#a7b8d3;font-size:.9rem;margin-bottom:26px;line-height:1.7}
+.stl-note b{color:#cfe0ff}
+.stl-related h2{color:#edf5ff;font-size:1.15rem;margin:0 0 12px}
+.stl-related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.stl-related-grid a{display:block;text-decoration:none;border:1px solid rgba(184,211,255,.16);border-radius:14px;padding:15px 16px;background:rgba(16,35,61,.6);transition:.18s}
+.stl-related-grid a:hover{border-color:rgba(99,230,189,.4);transform:translateY(-2px)}
+.stl-related-grid a b{display:block;font-size:1rem;color:#edf5ff}
+.stl-related-grid a span{display:block;color:#a7b8d3;font-size:.85rem;margin-top:3px}
+.stl-disc{margin-top:20px;border:1px solid rgba(184,211,255,.16);background:rgba(4,11,23,.3);border-radius:14px;padding:14px 16px;color:#a7b8d3;font-size:.84rem;line-height:1.7}
+.stl-disc b{color:#cfe0ff}
+</style>
+</head>
+<body>
+
+<div class="stl-toolbar"><div class="stl-in">
+  <a class="stl-back" href="../../tools.html">← 返回工具庫</a>
+  <span class="stl-lab">SAMUEL TRADING LAB</span>
+</div></div>
+
+<div class="wrap">
+  <section class="hero">
+    <div class="hero-card">
+      <div class="eyebrow">24H RESET · DAILY WIN LOOP</div>
+      <h1>不是排滿行程，<br>而是每天完成一次「我贏了」。</h1>
+      <p>這個工具把「前夜清障 → 早晨開局 → 深度執行 → 下午復位 → 晚間復盤」濃縮成一頁。每天只鎖定一個能看見、能交付的必勝任務。</p>
+      <div class="progress"><span id="progressBar"></span></div>
+      <div class="small" id="progressText">今天尚未設定任務。</div>
+    </div>
+    <aside class="stat-card">
+      <div class="stat-label">累積完成的必勝閉環</div>
+      <div class="stat-num" id="totalWins">0</div>
+      <div class="stat-note" id="streakText">從今天建立第一勝。</div>
+    </aside>
+  </section>
+
+  <nav class="nav">
+    <a href="#plan">① 前夜設定</a><a href="#launch">② 早晨開局</a><a href="#focus">③ 深度執行</a><a href="#reset">④ 下午復位</a><a href="#review">⑤ 晚間復盤</a><a href="#history">歷史贏家</a>
+  </nav>
+
+  <main class="grid">
+    <div>
+      <section id="plan" class="card">
+        <div class="tag">前夜清障｜3 分鐘</div>
+        <h2>設定明天唯一的必勝任務（MIT）</h2>
+        <p class="sub">規則：只能有一件，且必須是「做完後拿得出來」的可見交付，不是抽象的努力。</p>
+        <div class="template-row">
+          <button class="chip" data-template="交易復盤">交易復盤</button>
+          <button class="chip" data-template="內容創作">內容創作</button>
+          <button class="chip" data-template="工具開發">工具開發</button>
+          <button class="chip" data-template="健身健康">健身健康</button>
+          <button class="chip" data-template="客戶開發">客戶開發</button>
+        </div>
+        <div class="row">
+          <div><label for="date">執行日期</label><input id="date" type="date"></div>
+          <div><label for="category">任務類型</label><select id="category"><option>交易</option><option>內容</option><option>開發</option><option>健康</option><option>客戶</option><option>其他</option></select></div>
+        </div>
+        <label for="mit">明天 __:__ 到 __:__，我要完成什麼「可見交付」？</label>
+        <input id="mit" placeholder="例：完成 1 筆 MNQ 交易復盤，寫出進場理由、防守、改善規則">
+        <p class="small">檢查方式：是否能截圖、輸出、交付、發佈、勾選或明確保存？不能，就再縮小。</p>
+        <label for="firstAction">第一個動作（小到不需要意志力）</label>
+        <input id="firstAction" placeholder="例：打開交易紀錄，選擇今天第一筆交易">
+        <div class="row">
+          <div><label for="env">環境先準備好</label><textarea id="env" placeholder="例：桌面清空、復盤表打開、截圖放到同一資料夾"></textarea></div>
+          <div><label for="block">封住誘惑入口</label><textarea id="block" placeholder="例：手機放客廳充電；Threads／Shorts 不在完成前打開"></textarea></div>
+        </div>
+        <label for="ifthen">If–Then：明早／開始前想拖延時，我就……</label>
+        <input id="ifthen" placeholder="例：先開 5 分鐘計時器，只做第一個動作">
+        <label for="reason">明天啟動理由（一句話）</label>
+        <input id="reason" placeholder="例：我今天不是拼完美，我是在建立可重複的贏。">
+        <div class="btn-row"><button class="btn" id="savePlan">儲存今日計畫</button><button class="btn secondary" id="loadToday">載入今天</button></div>
+      </section>
+
+      <section id="focus" class="card">
+        <div class="tag">深度執行｜先產出，再修飾</div>
+        <h2>把任務切成可贏的小回合</h2>
+        <p class="sub">卡住時不換方向，改成低檔位版本：先列 5 個要點、先做粗稿、先完成最小可交付。</p>
+        <label for="roundDelivery">這一輪結束時，我要交付：</label>
+        <input id="roundDelivery" placeholder="例：完成交易截圖標記＋寫出 3 句復盤">
+        <div class="timer">
+          <p class="small">專注回合計時器</p><div id="clock">25:00</div>
+          <div class="btn-row" style="justify-content:center;margin-top:10px"><button class="btn success" id="startTimer">開始 25 分鐘</button><button class="btn secondary" id="pauseTimer">暫停</button><button class="btn secondary" id="resetTimer">重設</button></div>
+        </div>
+        <label for="downgrade">卡住時的 10 分鐘降級版</label>
+        <input id="downgrade" placeholder="例：只標記一筆交易的進出場；不分析、不寫長文">
+        <div class="btn-row"><button class="btn warn" id="saveRound">儲存本回合交付</button></div>
+        <div id="roundLog" class="history"></div>
+      </section>
+
+      <section id="reset" class="card">
+        <div class="tag">下午復位｜3 行即可</div>
+        <h2>不要重新找方向，只把同一件事推到可保存</h2>
+        <div class="checklist">
+          <label class="check"><input type="checkbox" id="move"><div><strong>10–20 分鐘輕活動</strong><span>走路、伸展、原地走皆可；目標是重啟，不是把自己練爆。</span></div></label>
+          <label class="check"><input type="checkbox" id="food"><div><strong>簡短補充水分與食物</strong><span>避免讓飢餓或過飽接管下午。</span></div></label>
+        </div>
+        <label for="amDone">我上午完成了什麼？</label><input id="amDone" placeholder="例：完成 1 筆復盤截圖與進場標記">
+        <label for="pmTask">我下午最重要的一件事是？</label><input id="pmTask" placeholder="例：把同一筆復盤整理成 3 條下次規則">
+        <label for="pmTime">我在幾點開始？</label><input id="pmTime" type="time">
+        <div class="btn-row"><button class="btn" id="saveReset">儲存下午復位</button></div>
+      </section>
+    </div>
+
+    <div>
+      <section id="launch" class="card">
+        <div class="tag">早晨開局｜60 分鐘內</div>
+        <h2>先進入主動模式，再接收外界</h2>
+        <p class="sub">不追求完美晨間儀式；重點是降低決策數，直接開始第一步。</p>
+        <div class="mit-box"><div class="mit-label">今天唯一必勝任務</div><div class="mit-text" id="mitPreview"><span class="empty">先在左側寫下你的可見交付。</span></div></div>
+        <div class="checklist" style="margin-top:15px">
+          <label class="check"><input class="launchCheck" type="checkbox"><div><strong>5 分鐘內離開床</strong><span>不要和「再躺一下」談判。</span></div></label>
+          <label class="check"><input class="launchCheck" type="checkbox"><div><strong>自然光＋喝水</strong><span>讓身體收到白天開始的訊號。</span></div></label>
+          <label class="check"><input class="launchCheck" type="checkbox"><div><strong>3–5 分鐘輕活動</strong><span>伸展、深蹲、原地走擇一。</span></div></label>
+          <label class="check"><input class="launchCheck" type="checkbox"><div><strong>完成前不打開資訊流</strong><span>社群、短影音與訊息延後。</span></div></label>
+          <label class="check"><input class="launchCheck" type="checkbox"><div><strong>執行第一個動作</strong><span id="firstActionPreview">先設定計畫後，這裡會顯示你的啟動動作。</span></div></label>
+        </div>
+      </section>
+
+      <section id="review" class="card">
+        <div class="tag">晚間復盤｜不開自責大會</div>
+        <h2>讓大腦收到「我完成了」的信號</h2>
+        <p class="sub">只記錄系統，不評價人格。明天的進步來自保留有效動作、刪除阻力。</p>
+        <label for="r1">今天最有效的動作是？</label><textarea id="r1"></textarea>
+        <label for="r2">今天最大的阻力是？</label><textarea id="r2"></textarea>
+        <label for="r3">阻力出現時，我做了什麼？</label><textarea id="r3"></textarea>
+        <label for="r4">明天要保留哪個動作？</label><textarea id="r4"></textarea>
+        <label for="r5">明天要刪除／降低什麼阻力？</label><textarea id="r5"></textarea>
+        <div class="divider"></div>
+        <label class="check"><input type="checkbox" id="winCheck"><div><strong>今天的 MIT 已完成</strong><span>只要完成你定義的可見交付，就算贏。不用靠加碼工作來證明自己。</span></div></label>
+        <div class="btn-row"><button class="btn success" id="finishDay">完成今日閉環</button><button class="btn secondary" id="rescueMode">今天失控了：切換 10 分鐘救援模式</button></div>
+        <div id="rescueBox" class="note hide" style="margin-top:14px"><b>救援模式：</b>把任務砍成 10 分鐘版本 → 做一個最小可見交付 → 睡前寫下明天第一步。今天不補債，只保住「不斷線」。</div>
+      </section>
+
+      <section id="history" class="card">
+        <div class="tag">完成紀錄</div>
+        <h2>你的「我贏了」資料庫</h2>
+        <p class="sub">不是拿來比較，而是提醒自己：你有能力啟動、完成、再回來。</p>
+        <div id="historyList" class="history"></div>
+        <div class="btn-row"><button class="btn secondary" id="exportData">匯出紀錄 JSON</button><button class="btn secondary" id="clearData">清除所有本機資料</button></div>
+      </section>
+    </div>
+  </main>
+  <footer>資料只儲存在此瀏覽器的本機儲存空間。核心原則：一個可見交付、低摩擦啟動、每天不斷線。</footer>
+</div>
+<div class="toast" id="toast"></div>
+
+<div class="stl-wrap-out">
+  <div class="stl-note"><b>工具用途：</b>把一天濃縮成「前夜設定 → 早晨開局 → 深度執行 → 下午復位 → 晚間復盤」，每天只鎖定一個能交付的必勝任務。　資料只儲存在你自己的瀏覽器（localStorage）；清除瀏覽器資料會一併清除，換裝置不會同步。</div>
+  <div class="stl-related">
+    <h2>相關工具</h2>
+    <div class="stl-related-grid">
+      <a href="../ideal-trader/"><b>成為理想交易員</b><span>開盤前風控與盤後復盤的身份養成系統。</span></a>
+      <a href="../../tools.html"><b>回到工具庫</b><span>看看其他交易紀律與成長工具</span></a>
+    </div>
+  </div>
+  <div class="stl-disc"><b>交易免責聲明：</b>本工具僅供交易紀律與自我復盤參考，不構成投資建議、獲利保證或任何交易承諾。請依你的帳戶規則、可承受風險與實際市場狀況自行決策。</div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const key='dailyWin24h_v1';
+let state=JSON.parse(localStorage.getItem(key)||'{"plans":{},"wins":[]}');
+let timer=null, seconds=1500;
+const today=()=>new Date().toISOString().slice(0,10);
+$('date').value=today();
+const fields=['date','category','mit','firstAction','env','block','ifthen','reason','roundDelivery','downgrade','amDone','pmTask','pmTime','r1','r2','r3','r4','r5'];
+function toast(t){const e=$('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2200)}
+function getPlan(){let p={};fields.forEach(f=>p[f]=$(f).value);p.move=$('move').checked;p.food=$('food').checked;p.launch=[...document.querySelectorAll('.launchCheck')].map(x=>x.checked);p.win=$('winCheck').checked;p.rounds=(state.plans[p.date]?.rounds)||[];return p}
+function fill(p={}){fields.forEach(f=>$(f).value=p[f]||'');$('date').value=p.date||today();$('move').checked=!!p.move;$('food').checked=!!p.food;$('winCheck').checked=!!p.win;[...document.querySelectorAll('.launchCheck')].forEach((x,i)=>x.checked=!!(p.launch||[])[i]);renderPreview();renderRoundLog();updateProgress()}
+function save(){const p=getPlan();state.plans[p.date]={...state.plans[p.date],...p};localStorage.setItem(key,JSON.stringify(state));renderPreview();updateProgress();toast('已儲存今天的行動系統')}
+function renderPreview(){const p=getPlan();$('mitPreview').textContent=p.mit||'先在左側寫下你的可見交付。';$('mitPreview').classList.toggle('empty',!p.mit);$('firstActionPreview').textContent=p.firstAction||'先設定計畫後，這裡會顯示你的啟動動作。'}
+function renderRoundLog(){const date=$('date').value;const r=state.plans[date]?.rounds||[];$('roundLog').innerHTML=r.length?r.map((x,i)=>`<div class="history-item"><b>回合 ${i+1}｜${x.time}</b><div>${escapeHtml(x.delivery)}</div></div>`).join(''):'<div class="small">還沒有記錄回合交付。</div>'}
+function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function wins(){return state.wins||[]}
+function updateStats(){const w=wins();$('totalWins').textContent=w.length;let st=0,d=new Date();while(w.some(x=>x.date===d.toISOString().slice(0,10))){st++;d.setDate(d.getDate()-1)}$('streakText').textContent=st?`目前連續 ${st} 天保住閉環。`:'從今天建立第一勝。';$('historyList').innerHTML=w.length?[...w].reverse().slice(0,12).map(x=>`<div class="history-item"><b>${x.date}｜${escapeHtml(x.mit||'未命名任務')}</b><div>${escapeHtml(x.note||'完成今日必勝閉環')}</div></div>`).join(''):'<div class="small">第一個完成紀錄會出現在這裡。</div>'}
+function updateProgress(){const p=getPlan();let checks=0,total=7;if(p.mit)checks++;if(p.firstAction)checks++;if(p.env)checks++;if(p.ifthen)checks++;if(p.reason)checks++;if(p.launch?.filter(Boolean).length>=3)checks++;if(p.win)checks++;let per=Math.round(checks/total*100);$('progressBar').style.width=per+'%';$('progressText').textContent=`今日系統完成度 ${per}%｜先確保一個可見交付。`}
+$('savePlan').onclick=save;$('loadToday').onclick=()=>{const d=$('date').value||today();fill(state.plans[d]||{date:d});toast('已載入 '+d+' 的計畫')};
+fields.forEach(f=>$(f).addEventListener('input',renderPreview));document.querySelectorAll('.launchCheck').forEach(x=>x.addEventListener('change',updateProgress));$('winCheck').addEventListener('change',updateProgress);
+$('date').addEventListener('change',()=>fill(state.plans[$('date').value]||{date:$('date').value}));
+document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{let t=b.dataset.template, examples={
+'交易復盤':['交易','完成 1 筆 MNQ 交易復盤：截圖標記進場、停損、出場，寫出 3 條規則','打開交易紀錄並選一筆交易','打開復盤表、整理當日截圖到同一資料夾','手機放客廳，完成前不開行情聊天室或社群','想逃避分析時，就先標記價格與時間 5 分鐘','我在建立能重複的交易紀律。'],
+'內容創作':['內容','完成 1 則 Threads 貼文草稿，含標題、主文與結尾互動句','打開草稿文件，寫第一句','打開備忘錄與素材資料夾','短影音與社群 App 限時','寫不出時，就先列 5 個想講的要點','我在累積可被看見的作品。'],
+'工具開發':['開發','完成一個功能的小型可驗證版本，並截圖測試結果','打開專案與待修改檔案','開啟專案、測試步驟與問題紀錄','關閉不相關分頁與通知','卡住時，先寫出重現步驟與最小修改假設','我不是一次做完產品，我是在推進一個可驗證版本。'],
+'健身健康':['健康','完成 30 分鐘運動並記錄訓練內容','換上運動服與鞋子','水壺、衣服、耳機放到門口','手機不帶進訓練區','不想運動時，先做 10 分鐘走路或伸展','我在維護能長期輸出的身體。'],
+'客戶開發':['客戶','完成 3 位潛在客戶的名單與第一則接觸訊息草稿','開啟名單表','打開名單、服務介紹與訊息範本','完成前不刷 Threads／短影音','怕被拒絕時，先完成第一位的資料收集','我在讓機會每天多一點。']};let x=examples[t];$('category').value=x[0];$('mit').value=x[1];$('firstAction').value=x[2];$('env').value=x[3];$('block').value=x[4];$('ifthen').value=x[5];$('reason').value=x[6];renderPreview();toast('已套用 '+t+' 範本')});
+$('saveRound').onclick=()=>{let d=$('date').value,txt=$('roundDelivery').value.trim();if(!txt)return toast('先寫下這一輪要交付什麼');state.plans[d]=state.plans[d]||getPlan();state.plans[d].rounds=state.plans[d].rounds||[];state.plans[d].rounds.push({delivery:txt,time:new Date().toLocaleTimeString('zh-TW',{hour:'2-digit',minute:'2-digit'})});localStorage.setItem(key,JSON.stringify(state));$('roundDelivery').value='';renderRoundLog();toast('已記錄一個可見交付')};
+function renderClock(){let m=Math.floor(seconds/60),s=seconds%60;$('clock').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')}
+$('startTimer').onclick=()=>{if(timer)return;timer=setInterval(()=>{seconds--;renderClock();if(seconds<=0){clearInterval(timer);timer=null;seconds=0;toast('本回合完成，記錄你的交付。')}},1000)};
+$('pauseTimer').onclick=()=>{clearInterval(timer);timer=null};$('resetTimer').onclick=()=>{clearInterval(timer);timer=null;seconds=1500;renderClock()};
+$('saveReset').onclick=save;$('rescueMode').onclick=()=>$('rescueBox').classList.toggle('hide');
+$('finishDay').onclick=()=>{const p=getPlan();if(!p.mit)return toast('先設定今天的可見交付');if(!$('winCheck').checked){$('winCheck').checked=true;p.win=true}if(!state.wins.some(x=>x.date===p.date)){state.wins.push({date:p.date,mit:p.mit,note:p.r1||'完成今日必勝閉環'});}state.plans[p.date]={...state.plans[p.date],...p};localStorage.setItem(key,JSON.stringify(state));updateStats();updateProgress();toast('今日閉環完成：你贏了一次。')};
+$('exportData').onclick=()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='24h-daily-win-record.json';a.click();URL.revokeObjectURL(a.href)};
+$('clearData').onclick=()=>{if(confirm('確定清除所有本機計畫與完成紀錄？')){state={plans:{},wins:[]};localStorage.removeItem(key);fill({date:today()});updateStats();toast('已清除本機資料')}};
+fill(state.plans[today()]||{date:today()});updateStats();renderClock();
+</script>
+</body></html>
