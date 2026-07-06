@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>從恐懼到豐盛｜影片重點整理</title>
+<style>
+:root{
+  --bg:#0a1020;--panel:#121c34;--panel2:#172544;--line:rgba(190,211,255,.15);
+  --text:#edf4ff;--muted:#a8b8d5;--mint:#76e6bb;--sky:#7db4ff;--gold:#ffd376;--rose:#ff8da0;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:var(--text);font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;
+background:radial-gradient(circle at 8% 0%,rgba(64,108,204,.25),transparent 30rem),radial-gradient(circle at 95% 14%,rgba(58,189,151,.13),transparent 28rem),var(--bg)}
+.wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+.hero{padding:68px 0 38px;border-bottom:1px solid var(--line)}
+.kicker{color:var(--mint);font-size:.82rem;font-weight:900;letter-spacing:.13em}
+h1{font-size:clamp(2rem,5vw,4rem);line-height:1.14;margin:13px 0 16px}
+.lead{font-size:1.12rem;color:var(--muted);max-width:890px}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:21px}.chip{padding:5px 10px;border:1px solid var(--line);border-radius:99px;color:#ccdcfa;font-size:.82rem}
+nav{position:sticky;top:0;z-index:4;background:rgba(10,16,32,.9);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:18px;overflow:auto;padding:11px 0}nav a{white-space:nowrap;color:var(--muted);text-decoration:none;font-size:.9rem}nav a:hover{color:var(--mint)}
+section{padding:48px 0;border-bottom:1px solid rgba(190,211,255,.1)}
+h2{font-size:clamp(1.55rem,3vw,2.3rem);line-height:1.3;margin:0 0 8px}.sub{color:var(--muted);margin:0 0 23px}
+.grid2,.grid3{display:grid;gap:17px}.grid2{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:repeat(3,1fr)}
+.card{background:linear-gradient(145deg,rgba(23,37,68,.97),rgba(18,28,52,.96));border:1px solid var(--line);border-radius:18px;padding:20px}
+.card h3{margin:0 0 9px;line-height:1.35}.card p{margin:8px 0}
+.num{color:var(--mint);font-weight:900;font-size:.82rem;letter-spacing:.1em}.quote{border-left:4px solid var(--mint);padding:16px 19px;background:rgba(118,230,187,.08);border-radius:12px;color:#dcfff1;font-size:1.08rem}
+.warn{border-left:4px solid var(--gold);background:rgba(255,211,118,.08);border-radius:12px;padding:17px 19px;color:#fff0ca}.note{border-left:4px solid var(--sky);background:rgba(125,180,255,.08);border-radius:12px;padding:17px 19px;color:#dce9ff}
+ul,ol{margin:8px 0 0;padding-left:1.32rem}li{margin:7px 0}
+table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.02);border-radius:14px;overflow:hidden}th,td{padding:12px 13px;border:1px solid var(--line);text-align:left;vertical-align:top}th{background:rgba(125,180,255,.12);color:#dbe9ff;font-size:.88rem}td{color:#d7e2f7}
+.action{padding:16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}.action b{display:block;color:var(--mint);margin-bottom:4px}
+.checklist label{display:flex;gap:10px;padding:13px 14px;border:1px solid var(--line);border-radius:12px;margin:9px 0;background:rgba(255,255,255,.02);cursor:pointer}.checklist input{accent-color:var(--mint);width:18px;height:18px;flex:0 0 auto;margin-top:4px}
+textarea{width:100%;min-height:110px;padding:12px;border-radius:12px;border:1px solid var(--line);background:#0a1428;color:var(--text);font:inherit;resize:vertical}
+.small{font-size:.88rem;color:var(--muted)}footer{padding:35px 0 55px;color:var(--muted);font-size:.86rem}
+@media(max-width:820px){.grid2,.grid3{grid-template-columns:1fr}th,td{padding:10px}}
+</style>
+
+<style id="stl-art-shell">
+.stl-artbar{background:#07111f;border-bottom:1px solid rgba(184,211,255,.16);font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif}
+.stl-artbar-in{width:min(1120px,calc(100% - 32px));margin:auto;display:flex;align-items:center;gap:14px;padding:11px 0}
+.stl-artbar a.stl-artbar-back{color:#edf5ff;text-decoration:none;font-weight:800;font-size:.9rem;min-height:36px;display:inline-flex;align-items:center}
+.stl-artbar a.stl-artbar-back:hover{color:#63e6bd}
+.stl-artbar a.stl-artbar-home{margin-left:auto;color:#a7b8d3;text-decoration:none;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.78rem;letter-spacing:.04em}
+.stl-artbar a.stl-artbar-home:hover{color:#63e6bd}
+.stl-artfoot{width:min(1120px,calc(100% - 32px));margin:8px auto 46px;display:flex;gap:14px;font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif}
+.stl-artfoot a{flex:1;text-align:center;padding:14px;border:1px solid rgba(184,211,255,.16);border-radius:12px;background:rgba(16,35,61,.5);color:#edf5ff;text-decoration:none;font-weight:750;transition:.18s}
+.stl-artfoot a:hover{border-color:rgba(99,230,189,.4);color:#63e6bd;transform:translateY(-2px)}
+</style>
+</head>
+<body>
+
+<div class="stl-artbar"><div class="stl-artbar-in">
+  <a class="stl-artbar-back" href="../articles.html">← 回文章列表</a>
+  <a class="stl-artbar-home" href="../index.html">SAMUEL TRADING LAB</a>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">VIDEO NOTE · SELF-GROWTH / ACTION / IDENTITY</div>
+  <h1>從恐懼到豐盛<br>把想要的人生，做成每天能執行的行動</h1>
+  <p class="lead">這支影片的核心不是「快速成功」，而是作者以自身創業、自媒體、旅行與自我調整的經驗，提出五個心態：鬆開限制、停止空想、允許失敗、先活出想成為的樣子、把注意力放回當下。</p>
+  <div class="meta"><span class="chip">主題：自我成長</span><span class="chip">核心：行動與身份</span><span class="chip">適合：卡在猶豫／害怕開始的人</span><span class="chip">閱讀時間：約 8 分鐘</span></div>
+</div></header>
+<nav><div class="wrap">
+<a href="#core">核心總結</a><a href="#five">五個心態</a><a href="#actions">可執行版本</a><a href="#avoid">避免誤讀</a><a href="#journal">自我練習</a>
+</div></nav>
+
+<main>
+<section id="core"><div class="wrap">
+<h2>1. 一頁核心總結</h2>
+<p class="sub">作者的主要論點：恐懼、匱乏與拖延，常不是因為你真的沒有能力，而是因為你把注意力放在「我還不夠好」「會不會失敗」「多久才會成功」；要用行動、回饋與持續調整取代腦內消耗。</p>
+<div class="grid3">
+<article class="card"><div class="num">01 · 看見限制</div><h3>先分辨：這是事實，還是信念？</h3><p>「錢很難賺」「市場飽和」「我還不夠好」可能是過去環境留下的解讀，不必自動變成你人生的規則。</p></article>
+<article class="card"><div class="num">02 · 以行動取得答案</div><h3>先做小型測試，不要等完全準備</h3><p>發一支影片、做一次嘗試、完成一個小作品，才能拿到真實回饋；空想只會放大不確定感。</p></article>
+<article class="card"><div class="num">03 · 用長期角度看失敗</div><h3>失敗不是終局，是排除法與能力累積</h3><p>一次結果不好，至少會告訴你什麼題材不適合、哪個能力要補、下一次應該怎麼調整。</p></article>
+</div>
+<div class="quote" style="margin-top:18px"><strong>影片最重要的一句：</strong>「行動會消除恐懼，而猶豫只會讓恐懼壯大。」<br><span class="small">實際意思不是魯莽衝，而是把大目標拆成可以承受的小實驗。</span></div>
+</div></section>
+
+<section id="five"><div class="wrap">
+<h2>2. 五個心態整理</h2>
+<p class="sub">以下是原影片的敘事骨架，改寫成比較容易落地的版本。</p>
+<div class="grid2">
+<article class="card">
+<div class="num">MINDSET 01</div><h3>鬆開限制性信念</h3>
+<p><strong>原始問題：</strong>把「賺錢很難」「我不夠好」「資源有限」當成不可改變的事實。</p>
+<p><strong>作者的轉向：</strong>不把焦點放在市場、別人或環境是否公平，而是回到自己能提供什麼價值、能否找到自己的獨特組合。</p>
+<p><strong>可轉成一句話：</strong>不要先問市場還有沒有位置，先問我能提供什麼不同的價值。</p>
+</article>
+<article class="card">
+<div class="num">MINDSET 02</div><h3>思考後立刻行動</h3>
+<p><strong>原始問題：</strong>反覆思考成功機率、方法與最壞結果，最後遲遲不開始。</p>
+<p><strong>作者的轉向：</strong>行動才會產生回饋；透過嘗試、體驗與調整，才知道自己喜歡什麼、適合什麼。</p>
+<p><strong>可轉成一句話：</strong>用一次小實驗，取代一週的反覆猜測。</p>
+</article>
+<article class="card">
+<div class="num">MINDSET 03</div><h3>突破恐懼，允許失敗</h3>
+<p><strong>原始問題：</strong>害怕作品沒人看、創業沒收入、努力白費，因此不敢投入。</p>
+<p><strong>作者的轉向：</strong>成功與失敗是一組過程；失敗提供題材、能力與方向的資訊，不只是一個負面結果。</p>
+<p><strong>可轉成一句話：</strong>把失敗改名為資料：它告訴我下一輪該怎麼調整。</p>
+</article>
+<article class="card">
+<div class="num">MINDSET 04</div><h3>先成為，再擁有</h3>
+<p><strong>原始問題：</strong>等到有錢、變瘦、變自信後，才覺得自己有資格過想要的生活。</p>
+<p><strong>作者的轉向：</strong>先接受現在的自己，再問「理想中的我，今天會怎麼做？」並用日常行為逐步靠近。</p>
+<p><strong>可轉成一句話：</strong>身份不是等成果來證明，而是用每天的選擇慢慢建立。</p>
+</article>
+<article class="card">
+<div class="num">MINDSET 05</div><h3>不被時間框架綁住，回到當下</h3>
+<p><strong>原始問題：</strong>焦慮自己多久成功、幾歲該完成什麼、別人會怎麼看。</p>
+<p><strong>作者的轉向：</strong>成果需要時間；比起追逐速成，重要的是把能控制的創作、學習、體驗放回今天。</p>
+<p><strong>可轉成一句話：</strong>不必放棄目標，但別把自我價值綁在截止日期上。</p>
+</article>
+<article class="card">
+<div class="num">補充主軸</div><h3>接受現況，不等於放棄改善</h3>
+<p>影片多次強調「接受現在的自己」。較務實的理解是：承認目前的資源、能力、收入或情緒，不花大量能量否定自己；再把剩下的能量拿去創造可改善的行動。</p>
+</article>
+</div>
+</div></section>
+
+<section id="actions"><div class="wrap">
+<h2>3. 把影片變成可執行版本</h2>
+<p class="sub">保留影片的精神，但改成可驗證的行動，不靠空泛激勵。</p>
+<div class="grid3">
+<div class="action"><b>限制信念 → 反證任務</b>寫下一句你常相信的限制，例如「我做這個太晚了」。接著列出 3 個反例或可驗證行動，而不是直接相信它。</div>
+<div class="action"><b>過度思考 → 24 小時小實驗</b>選一件你一直想做的事，在 24 小時內完成最小版本：一篇貼文、一段短片、一頁工具、一通詢問電話。</div>
+<div class="action"><b>害怕失敗 → 失敗紀錄表</b>每次結果不如預期，記錄：我測了什麼？結果？學到什麼？下一次改哪一個變因？</div>
+<div class="action"><b>先成為 → 身份行為清單</b>寫下「理想中的我今天會做什麼」，不要寫抽象形容詞，要寫具體行為與時間。</div>
+<div class="action"><b>時間焦慮 → 週期目標</b>把「我何時成功」改成「本週我完成幾次高品質嘗試」。例如完成 3 次內容輸出或 5 次規律練習。</div>
+<div class="action"><b>接受當下 → 資源盤點</b>每天寫下已擁有的 3 項資源：時間、技能、健康、朋友、設備、經驗或可聯繫的人。</div>
+</div>
+</div></section>
+
+<section id="avoid"><div class="wrap">
+<h2>4. 避免誤讀：哪些觀點應保留判斷</h2>
+<p class="sub">影片包含個人經驗、身心靈觀點與哲學式表述。以下整理成更穩健的使用方式。</p>
+<div class="table-wrap"><table>
+<thead><tr><th>影片觀點</th><th>可取的核心</th><th>較務實的使用方式</th></tr></thead>
+<tbody>
+<tr><td>「收入翻 16 倍」</td><td>行動與定位改變可能帶來成果差異。</td><td>這是作者的個人敘述，不是可保證結果。任何收入提升仍需要市場、能力、策略、成本與時間驗證。</td></tr>
+<tr><td>「市場不是匱乏的」</td><td>不要太早用市場飽和當成不行動的藉口。</td><td>市場確實有競爭與限制；正確做法是找利基、測需求、強化價值，而不是假設一定有錢可賺。</td></tr>
+<tr><td>「先成為，再擁有」</td><td>行為先行能幫助建立身份與習慣。</td><td>把它理解為「用小行為模擬理想身份」，不是假裝自己已經擁有不存在的資源或忽略現實風險。</td></tr>
+<tr><td>「不要設定時間」</td><td>避免用速度羞辱自己，重視長期累積。</td><td>可不把自我價值綁在期限，但工作、財務、健康仍需有可追蹤的期限與檢查點。</td></tr>
+<tr><td>「臣服／命運」</td><td>對不可控事件保持彈性，減少無效對抗。</td><td>可把它理解為接受不可控因素，同時持續做自己可控的準備、決策與風險管理。</td></tr>
+</tbody></table></div>
+<div class="warn" style="margin-top:18px"><strong>最值得保留的平衡：</strong>接受當下，不代表停止改善；相信可能性，不代表忽略風險；允許失敗，不代表不做復盤。</div>
+</div></section>
+
+<section id="journal"><div class="wrap">
+<h2>5. 三分鐘自我練習</h2>
+<p class="sub">可每天或每週做一次。目標是把影片從「看懂」變成「有改變」。</p>
+<div class="grid2">
+<div class="card checklist">
+<label><input type="checkbox"><span><strong>我現在最常出現的一句限制信念是：</strong><br><span class="small">例如：我還沒準備好、這市場太飽和、我做了也沒人看。</span></span></label>
+<label><input type="checkbox"><span><strong>我能在 24 小時內做的最小行動是：</strong><br><span class="small">必須小到不需要等準備好。</span></span></label>
+<label><input type="checkbox"><span><strong>理想中的我今天會做的一個具體行為：</strong><br><span class="small">例如：完成 30 分鐘專注練習、公開一個作品、按計畫停損。</span></span></label>
+<label><input type="checkbox"><span><strong>我今天擁有、但平常容易忽略的資源：</strong><br><span class="small">例如：已有的技能、時間、健康、設備、經驗、人脈。</span></span></label>
+</div>
+<div class="card">
+<h3>我的行動筆記</h3>
+<textarea placeholder="1. 我正在害怕什麼？
+2. 我能做的最小下一步是什麼？
+3. 最壞結果是什麼？我能承受或補救嗎？
+4. 這次結果不理想時，我要記錄哪一項學習？"></textarea>
+<p class="small">這個欄位不會自動儲存；可自行複製到筆記軟體或日記。</p>
+</div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="note"><strong>最終整理：</strong>這支影片真正有用的地方，不是承諾「只要相信就會成功」，而是提醒你：用可承受的行動打開回饋、用長期視角看待失敗、用日常行為建立想成為的身份。當焦慮出現時，先問自己：<strong>我現在可以做的下一個小動作是什麼？</strong></div>
+</div></section>
+</main>
+<footer><div class="wrap">整理依據：使用者提供的影片逐字稿。文中收入、人生轉變、命運與身心靈等內容屬影片作者的個人經驗與觀點，已在文內與可驗證的行動建議區分。</div></footer>
+
+<div class="stl-artfoot">
+  <a href="../articles.html">← 回文章列表</a>
+  <a href="../index.html">回首頁</a>
+</div>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>24H 穩定閉環｜交易員每日節奏系統</title>
+<title>24H 必勝閉環｜每日行動系統</title>
 <style>
 :root{
   --bg:#0b1020; --panel:#141b31; --panel2:#0f1730; --line:rgba(255,255,255,.11);
@@ -61,28 +61,28 @@ footer{color:var(--muted);text-align:center;font-size:12px;margin-top:22px}.divi
 <div class="wrap">
   <section class="hero">
     <div class="hero-card">
-      <div class="eyebrow">24H RESET · STABLE EXECUTION LOOP</div>
-      <h1>不是排滿行程，<br>而是每天完成一次「我有守住節奏」。</h1>
-      <p>這個工具把「盤前準備 → 執行回合 → 情緒復位 → 晚間復盤」濃縮成一頁。每天只鎖定一個能看見、能交付的穩定任務。</p>
+      <div class="eyebrow">24H RESET · DAILY WIN LOOP</div>
+      <h1>不是排滿行程，<br>而是每天完成一次「我贏了」。</h1>
+      <p>這個工具把「前夜清障 → 早晨開局 → 深度執行 → 下午復位 → 晚間復盤」濃縮成一頁。每天只鎖定一個能看見、能交付的必勝任務。</p>
       <div class="progress"><span id="progressBar"></span></div>
       <div class="small" id="progressText">今天尚未設定任務。</div>
     </div>
     <aside class="stat-card">
-      <div class="stat-label">累積完成的穩定閉環</div>
+      <div class="stat-label">累積完成的必勝閉環</div>
       <div class="stat-num" id="totalWins">0</div>
-      <div class="stat-note" id="streakText">從今天建立第一個穩定紀錄。</div>
+      <div class="stat-note" id="streakText">從今天建立第一勝。</div>
     </aside>
   </section>
 
   <nav class="nav">
-    <a href="#plan">① 盤前設定</a><a href="#launch">② 開局檢查</a><a href="#focus">③ 執行回合</a><a href="#reset">④ 情緒復位</a><a href="#review">⑤ 晚間復盤</a><a href="#history">穩定紀錄</a>
+    <a href="#plan">① 前夜設定</a><a href="#launch">② 早晨開局</a><a href="#focus">③ 深度執行</a><a href="#reset">④ 下午復位</a><a href="#review">⑤ 晚間復盤</a><a href="#history">歷史贏家</a>
   </nav>
 
   <main class="grid">
     <div>
       <section id="plan" class="card">
-        <div class="tag">盤前清障｜3 分鐘</div>
-        <h2>設定今天唯一的穩定任務（MIT）</h2>
+        <div class="tag">前夜清障｜3 分鐘</div>
+        <h2>設定明天唯一的必勝任務（MIT）</h2>
         <p class="sub">規則：只能有一件，且必須是「做完後拿得出來」的可見交付，不是抽象的努力。</p>
         <div class="template-row">
           <button class="chip" data-template="交易復盤">交易復盤</button>
@@ -104,16 +104,16 @@ footer{color:var(--muted);text-align:center;font-size:12px;margin-top:22px}.divi
           <div><label for="env">環境先準備好</label><textarea id="env" placeholder="例：桌面清空、復盤表打開、截圖放到同一資料夾"></textarea></div>
           <div><label for="block">封住誘惑入口</label><textarea id="block" placeholder="例：手機放客廳充電；Threads／Shorts 不在完成前打開"></textarea></div>
         </div>
-        <label for="ifthen">If–Then：盤前／開始前想拖延時，我就……</label>
+        <label for="ifthen">If–Then：明早／開始前想拖延時，我就……</label>
         <input id="ifthen" placeholder="例：先開 5 分鐘計時器，只做第一個動作">
-        <label for="reason">今天執行理由（一句話）</label>
-        <input id="reason" placeholder="例：我今天不是拼完美，我是在建立可重複的穩定。">
+        <label for="reason">明天啟動理由（一句話）</label>
+        <input id="reason" placeholder="例：我今天不是拼完美，我是在建立可重複的贏。">
         <div class="btn-row"><button class="btn" id="savePlan">儲存今日計畫</button><button class="btn secondary" id="loadToday">載入今天</button></div>
       </section>
 
       <section id="focus" class="card">
         <div class="tag">深度執行｜先產出，再修飾</div>
-        <h2>把任務切成可完成的小回合</h2>
+        <h2>把任務切成可贏的小回合</h2>
         <p class="sub">卡住時不換方向，改成低檔位版本：先列 5 個要點、先做粗稿、先完成最小可交付。</p>
         <label for="roundDelivery">這一輪結束時，我要交付：</label>
         <input id="roundDelivery" placeholder="例：完成交易截圖標記＋寫出 3 句復盤">
@@ -128,25 +128,25 @@ footer{color:var(--muted);text-align:center;font-size:12px;margin-top:22px}.divi
       </section>
 
       <section id="reset" class="card">
-        <div class="tag">情緒復位｜3 行即可</div>
+        <div class="tag">下午復位｜3 行即可</div>
         <h2>不要重新找方向，只把同一件事推到可保存</h2>
         <div class="checklist">
           <label class="check"><input type="checkbox" id="move"><div><strong>10–20 分鐘輕活動</strong><span>走路、伸展、原地走皆可；目標是重啟，不是把自己練爆。</span></div></label>
           <label class="check"><input type="checkbox" id="food"><div><strong>簡短補充水分與食物</strong><span>避免讓飢餓或過飽接管下午。</span></div></label>
         </div>
-        <label for="amDone">我已完成的準備或執行是？</label><input id="amDone" placeholder="例：完成 1 筆復盤截圖與進場標記">
-        <label for="pmTask">接下來最重要的一件事是？</label><input id="pmTask" placeholder="例：把同一筆復盤整理成 3 條下次規則">
-        <label for="pmTime">我在幾點回到計畫？</label><input id="pmTime" type="time">
+        <label for="amDone">我上午完成了什麼？</label><input id="amDone" placeholder="例：完成 1 筆復盤截圖與進場標記">
+        <label for="pmTask">我下午最重要的一件事是？</label><input id="pmTask" placeholder="例：把同一筆復盤整理成 3 條下次規則">
+        <label for="pmTime">我在幾點開始？</label><input id="pmTime" type="time">
         <div class="btn-row"><button class="btn" id="saveReset">儲存下午復位</button></div>
       </section>
     </div>
 
     <div>
       <section id="launch" class="card">
-        <div class="tag">交易日前開局</div>
+        <div class="tag">早晨開局｜60 分鐘內</div>
         <h2>先進入主動模式，再接收外界</h2>
         <p class="sub">不追求完美晨間儀式；重點是降低決策數，直接開始第一步。</p>
-        <div class="mit-box"><div class="mit-label">今天唯一穩定任務</div><div class="mit-text" id="mitPreview"><span class="empty">先在左側寫下你的可見交付。</span></div></div>
+        <div class="mit-box"><div class="mit-label">今天唯一必勝任務</div><div class="mit-text" id="mitPreview"><span class="empty">先在左側寫下你的可見交付。</span></div></div>
         <div class="checklist" style="margin-top:15px">
           <label class="check"><input class="launchCheck" type="checkbox"><div><strong>5 分鐘內離開床</strong><span>不要和「再躺一下」談判。</span></div></label>
           <label class="check"><input class="launchCheck" type="checkbox"><div><strong>自然光＋喝水</strong><span>讓身體收到白天開始的訊號。</span></div></label>
@@ -157,7 +157,7 @@ footer{color:var(--muted);text-align:center;font-size:12px;margin-top:22px}.divi
       </section>
 
       <section id="review" class="card">
-        <div class="tag">盤後復盤｜不開自責大會</div>
+        <div class="tag">晚間復盤｜不開自責大會</div>
         <h2>讓大腦收到「我完成了」的信號</h2>
         <p class="sub">只記錄系統，不評價人格。明天的進步來自保留有效動作、刪除阻力。</p>
         <label for="r1">今天最有效的動作是？</label><textarea id="r1"></textarea>
@@ -166,26 +166,26 @@ footer{color:var(--muted);text-align:center;font-size:12px;margin-top:22px}.divi
         <label for="r4">明天要保留哪個動作？</label><textarea id="r4"></textarea>
         <label for="r5">明天要刪除／降低什麼阻力？</label><textarea id="r5"></textarea>
         <div class="divider"></div>
-        <label class="check"><input type="checkbox" id="winCheck"><div><strong>今天的 MIT 已完成並被記錄</strong><span>只要完成你定義的可見交付，就代表今天有守住節奏。不用靠加碼工作來證明自己。</span></div></label>
+        <label class="check"><input type="checkbox" id="winCheck"><div><strong>今天的 MIT 已完成</strong><span>只要完成你定義的可見交付，就算贏。不用靠加碼工作來證明自己。</span></div></label>
         <div class="btn-row"><button class="btn success" id="finishDay">完成今日閉環</button><button class="btn secondary" id="rescueMode">今天失控了：切換 10 分鐘救援模式</button></div>
-        <div id="rescueBox" class="note hide" style="margin-top:14px"><b>救援模式：</b>把任務砍成 10 分鐘版本 → 做一個最小可見交付 → 睡前寫下明天第一步。今天不補債，只保住「不失控」。</div>
+        <div id="rescueBox" class="note hide" style="margin-top:14px"><b>救援模式：</b>把任務砍成 10 分鐘版本 → 做一個最小可見交付 → 睡前寫下明天第一步。今天不補債，只保住「不斷線」。</div>
       </section>
 
       <section id="history" class="card">
         <div class="tag">完成紀錄</div>
-        <h2>你的穩定紀錄資料庫</h2>
+        <h2>你的「我贏了」資料庫</h2>
         <p class="sub">不是拿來比較，而是提醒自己：你有能力啟動、完成、再回來。</p>
         <div id="historyList" class="history"></div>
         <div class="btn-row"><button class="btn secondary" id="exportData">匯出紀錄 JSON</button><button class="btn secondary" id="clearData">清除所有本機資料</button></div>
       </section>
     </div>
   </main>
-  <footer>資料只儲存在此瀏覽器的本機儲存空間。核心原則：一個可見交付、低摩擦啟動、每天守住交易節奏。</footer>
+  <footer>資料只儲存在此瀏覽器的本機儲存空間。核心原則：一個可見交付、低摩擦啟動、每天不斷線。</footer>
 </div>
 <div class="toast" id="toast"></div>
 
 <div class="stl-wrap-out">
-  <div class="stl-note"><b>工具用途：</b>把一天濃縮成「盤前設定 → 開局檢查 → 執行回合 → 情緒復位 → 盤後復盤」，每天只鎖定一個能交付的穩定任務。　資料只儲存在你自己的瀏覽器（localStorage）；清除瀏覽器資料會一併清除，換裝置不會同步。</div>
+  <div class="stl-note"><b>工具用途：</b>把一天濃縮成「前夜設定 → 早晨開局 → 深度執行 → 下午復位 → 晚間復盤」，每天只鎖定一個能交付的必勝任務。　資料只儲存在你自己的瀏覽器（localStorage）；清除瀏覽器資料會一併清除，換裝置不會同步。</div>
   <div class="stl-related">
     <h2>相關工具</h2>
     <div class="stl-related-grid">
@@ -198,7 +198,7 @@ footer{color:var(--muted);text-align:center;font-size:12px;margin-top:22px}.divi
 
 <script>
 const $=id=>document.getElementById(id);
-const key='dailyWin24h_v1'; // 保留舊 key，既有使用者紀錄可直接延續
+const key='dailyWin24h_v1';
 let state=JSON.parse(localStorage.getItem(key)||'{"plans":{},"wins":[]}');
 let timer=null, seconds=1500;
 const today=()=>new Date().toISOString().slice(0,10);
@@ -207,12 +207,12 @@ const fields=['date','category','mit','firstAction','env','block','ifthen','reas
 function toast(t){const e=$('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2200)}
 function getPlan(){let p={};fields.forEach(f=>p[f]=$(f).value);p.move=$('move').checked;p.food=$('food').checked;p.launch=[...document.querySelectorAll('.launchCheck')].map(x=>x.checked);p.win=$('winCheck').checked;p.rounds=(state.plans[p.date]?.rounds)||[];return p}
 function fill(p={}){fields.forEach(f=>$(f).value=p[f]||'');$('date').value=p.date||today();$('move').checked=!!p.move;$('food').checked=!!p.food;$('winCheck').checked=!!p.win;[...document.querySelectorAll('.launchCheck')].forEach((x,i)=>x.checked=!!(p.launch||[])[i]);renderPreview();renderRoundLog();updateProgress()}
-function save(){const p=getPlan();state.plans[p.date]={...state.plans[p.date],...p};localStorage.setItem(key,JSON.stringify(state));renderPreview();updateProgress();toast('已儲存今天的穩定節奏')}
+function save(){const p=getPlan();state.plans[p.date]={...state.plans[p.date],...p};localStorage.setItem(key,JSON.stringify(state));renderPreview();updateProgress();toast('已儲存今天的行動系統')}
 function renderPreview(){const p=getPlan();$('mitPreview').textContent=p.mit||'先在左側寫下你的可見交付。';$('mitPreview').classList.toggle('empty',!p.mit);$('firstActionPreview').textContent=p.firstAction||'先設定計畫後，這裡會顯示你的啟動動作。'}
 function renderRoundLog(){const date=$('date').value;const r=state.plans[date]?.rounds||[];$('roundLog').innerHTML=r.length?r.map((x,i)=>`<div class="history-item"><b>回合 ${i+1}｜${x.time}</b><div>${escapeHtml(x.delivery)}</div></div>`).join(''):'<div class="small">還沒有記錄回合交付。</div>'}
 function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
 function wins(){return state.wins||[]}
-function updateStats(){const w=wins();$('totalWins').textContent=w.length;let st=0,d=new Date();while(w.some(x=>x.date===d.toISOString().slice(0,10))){st++;d.setDate(d.getDate()-1)}$('streakText').textContent=st?`目前連續 ${st} 天保住閉環。`:'從今天建立第一個穩定紀錄。';$('historyList').innerHTML=w.length?[...w].reverse().slice(0,12).map(x=>`<div class="history-item"><b>${x.date}｜${escapeHtml(x.mit||'未命名任務')}</b><div>${escapeHtml(x.note||'完成今日穩定閉環')}</div></div>`).join(''):'<div class="small">第一個穩定紀錄會出現在這裡。</div>'}
+function updateStats(){const w=wins();$('totalWins').textContent=w.length;let st=0,d=new Date();while(w.some(x=>x.date===d.toISOString().slice(0,10))){st++;d.setDate(d.getDate()-1)}$('streakText').textContent=st?`目前連續 ${st} 天保住閉環。`:'從今天建立第一勝。';$('historyList').innerHTML=w.length?[...w].reverse().slice(0,12).map(x=>`<div class="history-item"><b>${x.date}｜${escapeHtml(x.mit||'未命名任務')}</b><div>${escapeHtml(x.note||'完成今日必勝閉環')}</div></div>`).join(''):'<div class="small">第一個完成紀錄會出現在這裡。</div>'}
 function updateProgress(){const p=getPlan();let checks=0,total=7;if(p.mit)checks++;if(p.firstAction)checks++;if(p.env)checks++;if(p.ifthen)checks++;if(p.reason)checks++;if(p.launch?.filter(Boolean).length>=3)checks++;if(p.win)checks++;let per=Math.round(checks/total*100);$('progressBar').style.width=per+'%';$('progressText').textContent=`今日系統完成度 ${per}%｜先確保一個可見交付。`}
 $('savePlan').onclick=save;$('loadToday').onclick=()=>{const d=$('date').value||today();fill(state.plans[d]||{date:d});toast('已載入 '+d+' 的計畫')};
 fields.forEach(f=>$(f).addEventListener('input',renderPreview));document.querySelectorAll('.launchCheck').forEach(x=>x.addEventListener('change',updateProgress));$('winCheck').addEventListener('change',updateProgress);
@@ -228,8 +228,8 @@ function renderClock(){let m=Math.floor(seconds/60),s=seconds%60;$('clock').text
 $('startTimer').onclick=()=>{if(timer)return;timer=setInterval(()=>{seconds--;renderClock();if(seconds<=0){clearInterval(timer);timer=null;seconds=0;toast('本回合完成，記錄你的交付。')}},1000)};
 $('pauseTimer').onclick=()=>{clearInterval(timer);timer=null};$('resetTimer').onclick=()=>{clearInterval(timer);timer=null;seconds=1500;renderClock()};
 $('saveReset').onclick=save;$('rescueMode').onclick=()=>$('rescueBox').classList.toggle('hide');
-$('finishDay').onclick=()=>{const p=getPlan();if(!p.mit)return toast('先設定今天的可見交付');if(!$('winCheck').checked){$('winCheck').checked=true;p.win=true}if(!state.wins.some(x=>x.date===p.date)){state.wins.push({date:p.date,mit:p.mit,note:p.r1||'完成今日穩定閉環'});}state.plans[p.date]={...state.plans[p.date],...p};localStorage.setItem(key,JSON.stringify(state));updateStats();updateProgress();toast('今日閉環完成：你守住了今天的節奏。')};
-$('exportData').onclick=()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='24h-stable-loop-record.json';a.click();URL.revokeObjectURL(a.href)};
+$('finishDay').onclick=()=>{const p=getPlan();if(!p.mit)return toast('先設定今天的可見交付');if(!$('winCheck').checked){$('winCheck').checked=true;p.win=true}if(!state.wins.some(x=>x.date===p.date)){state.wins.push({date:p.date,mit:p.mit,note:p.r1||'完成今日必勝閉環'});}state.plans[p.date]={...state.plans[p.date],...p};localStorage.setItem(key,JSON.stringify(state));updateStats();updateProgress();toast('今日閉環完成：你贏了一次。')};
+$('exportData').onclick=()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='24h-daily-win-record.json';a.click();URL.revokeObjectURL(a.href)};
 $('clearData').onclick=()=>{if(confirm('確定清除所有本機計畫與完成紀錄？')){state={plans:{},wins:[]};localStorage.removeItem(key);fill({date:today()});updateStats();toast('已清除本機資料')}};
 fill(state.plans[today()]||{date:today()});updateStats();renderClock();
 </script>

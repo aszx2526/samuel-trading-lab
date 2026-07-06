@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>自制力重建｜影片重點整理</title>
+<style>
+  :root{
+    --bg:#0b1220; --panel:#121c2d; --panel2:#0f1726; --text:#e8eef9; --muted:#a8b3c7;
+    --line:#28364e; --accent:#56d7b0; --accent2:#74a7ff; --warn:#ffbf69; --danger:#ff7b7b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(180deg,#0a1120 0%,#101a2b 100%);color:var(--text);
+       font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75}
+  .wrap{max-width:1080px;margin:auto;padding:42px 22px 72px}
+  .hero{padding:42px 38px;border:1px solid var(--line);border-radius:24px;
+        background:radial-gradient(circle at 80% 0%,rgba(86,215,176,.18),transparent 34%),var(--panel)}
+  .eyebrow{color:var(--accent);font-weight:800;letter-spacing:.08em;font-size:.85rem}
+  h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.2;margin:10px 0 16px}
+  h2{font-size:1.5rem;margin:44px 0 16px}
+  h3{margin:0 0 8px;font-size:1.15rem}
+  p{margin:8px 0}.lead{font-size:1.12rem;color:#d1daea;max-width:820px}
+  .note{margin-top:18px;padding:12px 14px;border-left:4px solid var(--warn);background:rgba(255,191,105,.08);color:#f4d7a5;border-radius:8px}
+  .grid{display:grid;gap:16px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card{background:rgba(18,28,45,.88);border:1px solid var(--line);border-radius:16px;padding:22px}
+  .num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(116,167,255,.16);color:var(--accent2);font-weight:900;margin-bottom:10px}
+  .tag{display:inline-block;padding:4px 9px;border-radius:999px;background:rgba(86,215,176,.12);color:var(--accent);font-size:.84rem;font-weight:700}
+  ul{padding-left:1.2em;margin:10px 0}li{margin:7px 0}
+  .summary{border:1px solid rgba(86,215,176,.36);background:rgba(86,215,176,.07);border-radius:16px;padding:20px 22px}
+  .step{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start;padding:19px 0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:0}.step .n{font-size:1.35rem;font-weight:900;color:var(--accent)}
+  table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:var(--panel2)}
+  th,td{padding:15px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  th{background:#18253b;color:#dce8ff} tr:last-child td{border-bottom:0}
+  .check{display:grid;gap:10px}
+  .check div{padding:12px 14px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:10px}
+  .footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+  @media(max-width:720px){.hero{padding:30px 24px}.grid.two{grid-template-columns:1fr}.wrap{padding:24px 14px 52px}}
+</style>
+
+<style id="stl-art-shell">
+.stl-artbar{background:#07111f;border-bottom:1px solid rgba(184,211,255,.16);font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif}
+.stl-artbar-in{width:min(1120px,calc(100% - 32px));margin:auto;display:flex;align-items:center;gap:14px;padding:11px 0}
+.stl-artbar a.stl-artbar-back{color:#edf5ff;text-decoration:none;font-weight:800;font-size:.9rem;min-height:36px;display:inline-flex;align-items:center}
+.stl-artbar a.stl-artbar-back:hover{color:#63e6bd}
+.stl-artbar a.stl-artbar-home{margin-left:auto;color:#a7b8d3;text-decoration:none;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.78rem;letter-spacing:.04em}
+.stl-artbar a.stl-artbar-home:hover{color:#63e6bd}
+.stl-artfoot{width:min(1120px,calc(100% - 32px));margin:8px auto 46px;display:flex;gap:14px;font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif}
+.stl-artfoot a{flex:1;text-align:center;padding:14px;border:1px solid rgba(184,211,255,.16);border-radius:12px;background:rgba(16,35,61,.5);color:#edf5ff;text-decoration:none;font-weight:750;transition:.18s}
+.stl-artfoot a:hover{border-color:rgba(99,230,189,.4);color:#63e6bd;transform:translateY(-2px)}
+</style>
+</head>
+<body>
+
+<div class="stl-artbar"><div class="stl-artbar-in">
+  <a class="stl-artbar-back" href="../articles.html">← 回文章列表</a>
+  <a class="stl-artbar-home" href="../index.html">SAMUEL TRADING LAB</a>
+</div></div>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">影片內容萃取・行動版筆記</div>
+    <h1>從自控差到穩定自律<br>不是硬撐，而是改變系統</h1>
+    <p class="lead">這支影片的核心觀點是：長期自律不能只靠意志力。真正有效的做法，是先看見自制力失效的心理陷阱，再把想做的行為做成幾乎不需要掙扎的習慣與環境設計。</p>
+    <div class="note"><strong>資料範圍說明：</strong>上傳逐字稿的內容在「習慣比意志力更能維持自律」後結束，因此本整理只根據目前可讀到的內容，不補寫未出現在檔案中的「兩個方法」細節。</div>
+  </section>
+
+  <h2>一句話總結</h2>
+  <div class="summary">
+    <strong>自制力差，不一定是你不夠努力。</strong><br>
+    當注意力被分散、你用獎勵合理化放縱、把困難的事推給未來的自己，或被「看起來健康／正當」的標籤誤導時，衝動系統就會接管決策。解法不是一直責備自己，而是讓目標更清楚、誘惑更難接近、行動更固定。
+  </div>
+
+  <h2>影片提出的自制力架構</h2>
+  <div class="grid two">
+    <article class="card">
+      <span class="tag">自制力系統</span>
+      <h3>前額葉的三種能力</h3>
+      <ul>
+        <li><strong>「我不要」：</strong>在誘惑來時踩煞車。</li>
+        <li><strong>「我要做」：</strong>把該做但不想做的事完成。</li>
+        <li><strong>「我想要」：</strong>記住長期目標與真正重視的結果。</li>
+      </ul>
+    </article>
+    <article class="card">
+      <span class="tag">衝動系統</span>
+      <h3>當下舒服，通常比長期目標更有吸引力</h3>
+      <p>人在疲累、分心、沒有明確規則時，容易由直覺與慾望做決策。此時不是你突然變差，而是決策條件讓衝動更容易贏。</p>
+    </article>
+  </div>
+
+  <h2>四種最常見的自制力陷阱</h2>
+  <div class="grid two">
+    <article class="card">
+      <div class="num">1</div>
+      <h3>注意力分散</h3>
+      <p>同時處理太多事，理性資源會被占用，剩下的選擇更容易被直覺、折扣、娛樂或慾望帶走。</p>
+      <p><strong>例子：</strong>無目的逛賣場容易買一堆促銷品；有購物清單時比較不受影響。</p>
+      <p><strong>對策：</strong>先定一個明確任務與完成條件，降低臨場選擇。</p>
+    </article>
+    <article class="card">
+      <div class="num">2</div>
+      <h3>道德許可</h3>
+      <p>做了一點好事，就覺得自己「應該被獎勵」，於是允許一個直接破壞目標的行為。</p>
+      <p><strong>例子：</strong>減肥一天後大吃；剛多賺一點錢就衝動消費。</p>
+      <p><strong>對策：</strong>把獎勵改成不破壞目標的形式，例如散步、休息、看電影，而不是暴食或過度消費。</p>
+    </article>
+    <article class="card">
+      <div class="num">3</div>
+      <h3>把自律借給明天</h3>
+      <p>相信「明天的我會比較有毅力」，因此今天可以先放鬆。問題是未來的自己通常會遇到同樣的誘惑。</p>
+      <p><strong>例子：</strong>買了跑步機，卻把真正開始運動一直往後延。</p>
+      <p><strong>對策：</strong>把目標縮小到今天能完成的最小動作，例如只換衣服、只走五分鐘。</p>
+    </article>
+    <article class="card">
+      <div class="num">4</div>
+      <h3>光環效應</h3>
+      <p>因為某件事帶有「健康、公益、努力、低卡」等正面標籤，就忽略它實際的代價與風險。</p>
+      <p><strong>例子：</strong>以為沙拉一定低熱量，卻忽略高熱量醬料；以為做公益後可多吃巧克力。</p>
+      <p><strong>對策：</strong>看具體內容與行為結果，不用標籤替自己背書。</p>
+    </article>
+  </div>
+
+  <h2>影片最重要的觀點：最高級的自律是習慣</h2>
+  <div class="card">
+    <p>真正穩定的人，不是每天都靠意志力逼自己撐住，而是把關鍵行為固定在相同的時間、地點與觸發條件裡。當行為變成例行，你不需要每天重新跟自己談判。</p>
+    <table>
+      <thead><tr><th>只靠意志力</th><th>用習慣與系統</th></tr></thead>
+      <tbody>
+        <tr><td>每天問自己要不要做</td><td>固定時間到了就做</td></tr>
+        <tr><td>容易受情緒、疲勞與誘惑影響</td><td>用流程降低決策成本</td></tr>
+        <tr><td>失敗後容易自責，進而放棄</td><td>失誤後回到下一個固定節點</td></tr>
+        <tr><td>目標很大，但開始阻力也很大</td><td>先建立小到不能失敗的起步行為</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>可直接執行的「自律重建流程」</h2>
+  <section class="card">
+    <div class="step"><div class="n">01</div><div><strong>只選一個目標。</strong><br>不要同時改作息、減肥、讀書、戒社群與練交易。先選目前最影響你的單一行為。</div></div>
+    <div class="step"><div class="n">02</div><div><strong>把行動縮到兩分鐘內能開始。</strong><br>不是「每天運動一小時」，而是「晚餐後穿鞋下樓走五分鐘」。先建立開始的自動化。</div></div>
+    <div class="step"><div class="n">03</div><div><strong>寫出明確觸發條件。</strong><br>公式：<em>當我完成 A，就立刻做 B。</em> 例如「刷完牙後，立刻打開交易復盤表，寫一筆今天的觀察。」</div></div>
+    <div class="step"><div class="n">04</div><div><strong>先移除誘惑，不要只測試意志力。</strong><br>關閉通知、把零食移出視線、預先設定交易平台可交易時段，讓壞行為的開始成本提高。</div></div>
+    <div class="step"><div class="n">05</div><div><strong>每次失誤只做復盤，不做人格審判。</strong><br>問：「是哪一個陷阱出現？」而不是「我是不是很爛？」把失誤視為系統需要調整的訊號。</div></div>
+  </section>
+
+  <h2>套用到交易：避免「衝動系統」接管</h2>
+  <div class="grid two">
+    <article class="card">
+      <h3>常見交易版本的四個陷阱</h3>
+      <ul>
+        <li><strong>分心：</strong>邊看社群、直播、其他商品，邊找進場。</li>
+        <li><strong>道德許可：</strong>「今天已經守規則了，這筆可以隨便試。」</li>
+        <li><strong>明日信用：</strong>「今天先亂打，明天再認真復盤。」</li>
+        <li><strong>光環效應：</strong>「這是高手／群組推薦的，所以不用照自己的條件。」</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>交易前的 60 秒檢查</h3>
+      <div class="check">
+        <div>□ 這筆是否符合我寫下來的型態與進場條件？</div>
+        <div>□ 停損位置、單口數、最大虧損是否先定好？</div>
+        <div>□ 我現在是在執行計畫，還是在找理由下單？</div>
+        <div>□ 若這筆錯了，我能否接受它是正常損失？</div>
+      </div>
+    </article>
+  </div>
+
+  <h2>今日開始版本：7 天只練一件事</h2>
+  <div class="card">
+    <p><strong>建議任務：</strong>建立「固定時間、固定位置、固定兩分鐘」的自律起步。</p>
+    <ul>
+      <li><strong>第 1 天：</strong>選定一件最想改善的事，寫下兩分鐘版本。</li>
+      <li><strong>第 2–3 天：</strong>設定觸發條件，只要求完成開始，不要求完美。</li>
+      <li><strong>第 4 天：</strong>記錄哪個誘惑最容易打斷你。</li>
+      <li><strong>第 5 天：</strong>移除一個誘惑：通知、零食、社群捷徑或臨時下單入口。</li>
+      <li><strong>第 6 天：</strong>把獎勵改成不傷害目標的獎勵。</li>
+      <li><strong>第 7 天：</strong>回顧：哪個觸發最有效？哪個陷阱最常出現？下週只調整一件事。</li>
+    </ul>
+  </div>
+
+  <section class="footer">
+    <strong>來源：</strong>〈从自控极差的废人，到超级自律的大神？UP亲测两个方法，改变自己像喝水一样简单【心河摆渡】〉逐字稿。<br>
+    本頁為內容整理與行動化轉譯；影片逐字稿後段未完整提供，因此未將未出現內容當作影片結論。
+  </section>
+</main>
+
+<div class="stl-artfoot">
+  <a href="../articles.html">← 回文章列表</a>
+  <a href="../index.html">回首頁</a>
+</div>
+
+</body>
+</html>

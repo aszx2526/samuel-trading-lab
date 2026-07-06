@@ -5,8 +5,6 @@
 
 技術：HTML + CSS + Vanilla JavaScript　｜　部署：GitHub + Vercel
 
-視覺主題：深色交易終端、風控儀表板與低飽和訊號色；核心產品語言統一使用「穩定、紀律、復盤、可持續執行」。
-
 ---
 
 ## 檔案結構
@@ -21,7 +19,7 @@ samuel-trading-lab/
 ├─ README.md           本檔
 │
 ├─ assets/
-│  ├─ css/site.css         共用樣式（交易終端視覺 + RWD）
+│  ├─ css/site.css         共用樣式（深色系統 + RWD）
 │  ├─ js/site.js           導覽高亮、文章卡、時間軸、社群連結
 │  ├─ js/render-tools.js   工具卡渲染 + 分類篩選 + 漸層預設封面
 │  ├─ images/covers/       工具封面圖（可留空）
@@ -35,7 +33,7 @@ samuel-trading-lab/
 │
 └─ tools/
    ├─ ideal-trader/index.html   成為理想交易員（已整合外框）
-   └─ daily-win/index.html      24H 穩定閉環（交易員每日節奏系統）
+   └─ daily-win/index.html      24H 必勝閉環（已整合外框）
 ```
 
 ---

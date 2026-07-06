@@ -31,8 +31,8 @@ const tools = [
   },
   {
     id: "daily-win",
-    title: "24H 穩定閉環",
-    description: "以一個可見交付，建立每日「啟動 → 執行 → 復盤」的穩定節奏。",
+    title: "24H 必勝閉環",
+    description: "以一個可見交付，建立每日「啟動 → 執行 → 復盤」的閉環。",
     category: "成長系統",
     status: "免費使用",
     statusType: "live",

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 數位產品變現｜重點整理與交易工具應用</title>
+<style>
+:root{--bg:#07111f;--panel:#0e1b2c;--panel2:#12243b;--line:#24415e;--text:#e8f1fb;--muted:#9bb0c7;--cyan:#53d6ff;--green:#5de5a8;--amber:#ffcc66;--red:#ff7f89}
+*{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 85% 0%,#10365a 0,transparent 28%),linear-gradient(145deg,#07111f,#0b1727 55%,#07111f);font-family:"Microsoft JhengHei","Noto Sans TC",Arial,sans-serif;color:var(--text);line-height:1.75}
+.container{width:min(1120px,calc(100% - 32px));margin:auto}.hero{padding:70px 0 42px;border-bottom:1px solid var(--line)}
+.badge{display:inline-block;border:1px solid #2c6688;color:var(--cyan);border-radius:999px;padding:5px 12px;font-size:.86rem;letter-spacing:.08em}.hero h1{font-size:clamp(2rem,5vw,4.2rem);line-height:1.15;margin:18px 0}.hero h1 span{color:var(--cyan)}.lead{font-size:1.12rem;color:var(--muted);max-width:850px}
+.meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.pill{background:#102038;border:1px solid var(--line);padding:7px 12px;border-radius:8px;color:#bad0e6;font-size:.9rem}
+section{padding:42px 0;border-bottom:1px solid var(--line)}h2{font-size:1.65rem;margin:0 0 18px}.sub{color:var(--muted);margin-top:-8px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.card{background:linear-gradient(150deg,rgba(20,40,63,.93),rgba(11,25,43,.93));border:1px solid var(--line);border-radius:15px;padding:21px;box-shadow:0 15px 30px rgba(0,0,0,.14)}.card h3{margin:0 0 8px;font-size:1.08rem}.card p{color:#c3d5e8;margin:0}.c4{grid-column:span 4}.c6{grid-column:span 6}.c8{grid-column:span 8}.c12{grid-column:span 12}
+.num{font-size:.86rem;color:var(--cyan);font-weight:700;letter-spacing:.06em}.good{border-left:4px solid var(--green)}.warn{border-left:4px solid var(--amber)}.risk{border-left:4px solid var(--red)}
+table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:12px;border-style:hidden;box-shadow:0 0 0 1px var(--line)}th,td{text-align:left;padding:14px 15px;border:1px solid var(--line);vertical-align:top}th{background:#132a45;color:var(--cyan);font-size:.92rem}td{color:#cad9e8}tr:nth-child(even){background:rgba(255,255,255,.018)}
+ol,ul{padding-left:1.25em;margin:10px 0}li{margin:6px 0;color:#c8d7e7}.callout{background:linear-gradient(100deg,rgba(83,214,255,.13),rgba(93,229,168,.07));border:1px solid #2e6384;border-radius:14px;padding:22px}.callout strong{color:var(--cyan)}
+.kpi{font-size:1.6rem;font-weight:800;color:var(--green)}.small{font-size:.9rem;color:var(--muted)}.footer{padding:34px 0 55px;color:var(--muted);font-size:.88rem}
+@media(max-width:760px){.c4,.c6,.c8{grid-column:span 12}.hero{padding-top:48px}section{padding:32px 0}th,td{padding:11px;font-size:.92rem}.table-wrap{overflow:auto}}
+</style>
+
+<style id="stl-art-shell">
+.stl-artbar{background:#07111f;border-bottom:1px solid rgba(184,211,255,.16);font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif}
+.stl-artbar-in{width:min(1120px,calc(100% - 32px));margin:auto;display:flex;align-items:center;gap:14px;padding:11px 0}
+.stl-artbar a.stl-artbar-back{color:#edf5ff;text-decoration:none;font-weight:800;font-size:.9rem;min-height:36px;display:inline-flex;align-items:center}
+.stl-artbar a.stl-artbar-back:hover{color:#63e6bd}
+.stl-artbar a.stl-artbar-home{margin-left:auto;color:#a7b8d3;text-decoration:none;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.78rem;letter-spacing:.04em}
+.stl-artbar a.stl-artbar-home:hover{color:#63e6bd}
+.stl-artfoot{width:min(1120px,calc(100% - 32px));margin:8px auto 46px;display:flex;gap:14px;font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif}
+.stl-artfoot a{flex:1;text-align:center;padding:14px;border:1px solid rgba(184,211,255,.16);border-radius:12px;background:rgba(16,35,61,.5);color:#edf5ff;text-decoration:none;font-weight:750;transition:.18s}
+.stl-artfoot a:hover{border-color:rgba(99,230,189,.4);color:#63e6bd;transform:translateY(-2px)}
+</style>
+</head>
+<body>
+
+<div class="stl-artbar"><div class="stl-artbar-in">
+  <a class="stl-artbar-back" href="../articles.html">← 回文章列表</a>
+  <a class="stl-artbar-home" href="../index.html">SAMUEL TRADING LAB</a>
+</div></div>
+
+<main class="container">
+<header class="hero">
+<div class="badge">影片內容整理 × 可執行商業模型</div>
+<h1>用 AI 製作數位產品<br><span>從內容到第一筆銷售的流程</span></h1>
+<p class="lead">這份整理把影片的核心做法，轉成可判斷、可執行的商業流程；並額外套用到你目前正在做的「交易工具、交易養成內容、Threads／Shorts 導流」方向。</p>
+<div class="meta"><span class="pill">核心主張：賣解決方案，不是賣資訊</span><span class="pill">產品：電子書／模板／工具／系統</span><span class="pill">真正重點：產品 20%，行銷 75%</span></div>
+</header>
+
+<section>
+<h2>一頁看懂：這支影片在講什麼？</h2>
+<div class="grid">
+<div class="card c4 good"><div class="num">01｜選題</div><h3>找到痛點明確的族群</h3><p>不要先問「我能做什麼」，而是先問「誰正在被某個問題困擾，而且願意付錢縮短解決時間」。</p></div>
+<div class="card c4 good"><div class="num">02｜產品</div><h3>用 AI 快速做出最小可售版本</h3><p>Claude 協助架構、文字與案例；Canva 協助排版與封面。先完成可用版本，再依回饋持續優化。</p></div>
+<div class="card c4 good"><div class="num">03｜成交</div><h3>用內容免費取得流量</h3><p>商店與商品上架只是開始。靠 Threads、短影音、輪播內容，將受眾導向產品頁完成轉換。</p></div>
+</div>
+</section>
+
+<section>
+<h2>核心商業邏輯</h2>
+<table>
+<thead><tr><th>影片觀點</th><th>真正意思</th><th>你應該採取的做法</th></tr></thead>
+<tbody>
+<tr><td>數位產品幾乎可零成本開始</td><td>沒有庫存與物流，製作、交付、複製的邊際成本低。</td><td>先從 PDF、Notion 模板、可下載工具、使用教學包開始，不要一開始就做大型課程。</td></tr>
+<tr><td>不是賣資訊，而是賣解決方案</td><td>使用者買的是「從混亂到清楚、從不會到能做」的結果。</td><td>產品名稱、封面、商品頁都要先說清楚：適合誰、解決什麼、買後能得到什麼改變。</td></tr>
+<tr><td>AI 不能直接複製拿去賣</td><td>AI 只加快初稿，不保證正確、差異化或實用性。</td><td>必須加入你自己的觀察、範例、流程、檢核表、使用情境與實測結果。</td></tr>
+<tr><td>產品只占 20%，行銷占 75%</td><td>做完商品不等於有人看見，更不等於會購買。</td><td>產品開發與內容分發同步進行；建立內容題材庫與固定導流路徑。</td></tr>
+<tr><td>社群帳號是長期資產</td><td>帳號累積的是信任與自然流量，不只是一篇貼文的曝光。</td><td>把 Threads／Shorts 經營成「交易成長、紀律、工具實作」的固定定位。</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>影片中的標準執行流程</h2>
+<div class="grid">
+<div class="card c6"><div class="num">A｜建店與品牌基礎</div><ol><li>選擇一個細分市場與品牌名稱。</li><li>用 Shopify + AI 建站工具快速建立數位商品商店。</li><li>先用預設網址測試；有驗證需求後再購入獨立網域。</li></ol></div>
+<div class="card c6"><div class="num">B｜決定第一個商品</div><ol><li>列出受眾痛點、想達成的改變與常見卡點。</li><li>挑一個問題明確、交付簡單、能快速驗證的主題。</li><li>電子書適合作為新手 MVP，但不是唯一形式。</li></ol></div>
+<div class="card c6"><div class="num">C｜製作與包裝</div><ol><li>以 Claude 產出初步架構、章節、清單與案例草稿。</li><li>人工校對內容，補足經驗、步驟、限制與錯誤示範。</li><li>用 Canva 製作乾淨簡潔的封面與內頁，輸出 PDF。</li></ol></div>
+<div class="card c6"><div class="num">D｜上架與曝光</div><ol><li>商品頁以「痛點 → 解法 → 包含內容 → 使用後成果」撰寫。</li><li>設定低門檻入門價格，降低第一次購買阻力。</li><li>用 Threads、Instagram 輪播、Shorts 分享可立即受用的內容並導流。</li></ol></div>
+</div>
+</section>
+
+<section>
+<h2>套用到你的交易工具：最值得先賣的不是「保證獲利」</h2>
+<div class="callout"><strong>建議定位：</strong>販售「幫助交易者建立觀察、紀錄、執行與復盤流程的工具」，而不是暗示保證勝率或固定獲利。這樣更符合你正在做的實際產品，也更容易長期建立信任。</div>
+<br>
+<table>
+<thead><tr><th>可做商品</th><th>解決的痛點</th><th>最小可售版本</th><th>可延伸方向</th></tr></thead>
+<tbody>
+<tr><td>破底翻觀察工具</td><td>盤中難以持續盯盤、容易錯過結構變化。</td><td>桌面版提醒工具＋安裝教學＋使用設定指南。</td><td>多週期統計、訊號品質紀錄、進場前檢核。</td></tr>
+<tr><td>交易復盤模板</td><td>交易後只看損益，沒有留下可優化的資料。</td><td>Notion／Excel 模板＋七題復盤流程＋範例。</td><td>自動統計頁、截圖標記、月度回顧報告。</td></tr>
+<tr><td>理想交易員養成系統</td><td>知道規則但做不到，容易追單、放大、情緒化交易。</td><td>30 天行動 PDF＋每日檢核卡＋身份提醒頁。</td><td>會員挑戰、社群共學、進階紀律工具包。</td></tr>
+<tr><td>交易內容轉換工具</td><td>看了影片有感，但無法轉成自己能執行的規則。</td><td>YouTube 逐字稿轉摘要／行動清單 HTML 工具。</td><td>策略卡片、題材庫、個人知識庫與訂閱制。</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>你可以直接採用的商品頁公式</h2>
+<div class="grid">
+<div class="card c12">
+<h3>標題公式：受眾目前狀態 ＋ 明確轉變 ＋ 工具形式</h3>
+<p>範例：<strong>「總是在盤中追單？用『交易前 30 秒檢核系統』降低衝動下單」</strong></p>
+<h3 style="margin-top:18px">商品描述結構</h3>
+<ol>
+<li><strong>先講痛點：</strong>你是否常在訊號出現後才追進去，或交易結束後只知道自己又亂做？</li>
+<li><strong>說明解法：</strong>這不是教你預測市場，而是一套讓你有固定觀察與執行順序的工具。</li>
+<li><strong>列出內容：</strong>包含什麼檔案、功能、教學、模板、範例與適用平台。</li>
+<li><strong>說明使用後的改變：</strong>幫助你把主觀感覺轉成可重複檢討的紀錄。</li>
+<li><strong>補上限制：</strong>工具不是投資建議、不保證獲利，交易仍有風險。</li>
+</ol>
+</div>
+</div>
+</section>
+
+<section>
+<h2>建議的 7 天驗證行動</h2>
+<div class="grid">
+<div class="card c4"><div class="kpi">Day 1–2</div><h3>選一個單一痛點</h3><p>先只做一個產品，例如「破底翻訊號紀錄與復盤工具包」，不要同時包進策略、課程、社群、軟體全部內容。</p></div>
+<div class="card c4"><div class="kpi">Day 3–4</div><h3>完成可交付 MVP</h3><p>做出工具檔、使用說明、常見問題、示範截圖與一份 10 分鐘內能看懂的快速開始文件。</p></div>
+<div class="card c4"><div class="kpi">Day 5</div><h3>製作銷售頁</h3><p>先用一頁式網站或 Shopify 商品頁，重點是清楚呈現結果、內容與限制，而不是功能塞滿。</p></div>
+<div class="card c6"><div class="kpi">Day 6</div><h3>連續發布 3 則內容</h3><p>題材可用：①「我以前如何錯過破底翻」②「我怎麼把看盤感覺變成規則」③「交易工具不該保證獲利，而該幫你留下資料」。</p></div>
+<div class="card c6"><div class="kpi">Day 7</div><h3>看訊號，不只看銷量</h3><p>記錄瀏覽、點擊、私訊問題、收藏、留言與下載意願。第一週目標是確認受眾是否真的在乎該痛點。</p></div>
+</div>
+</section>
+
+<section>
+<h2>必須保留的風險提醒</h2>
+<div class="grid">
+<div class="card c6 warn"><h3>影片中的數字與平台方案會變動</h3><p>例如 Shopify 優惠、AI 建站工具功能、域名價格、平台規則與費率，不應直接照抄。正式採用前要再次確認官方資訊。</p></div>
+<div class="card c6 risk"><h3>交易類產品不能把行銷話術做成獲利承諾</h3><p>避免使用「必勝、穩賺、高勝率保證、保證出金」等表述。以紀錄、提醒、訓練、流程、教育用途定位較安全，也更能建立長期品牌。</p></div>
+<div class="card c12 warn"><h3>真正的驗證方式不是「做完再賣」</h3><p>在完整開發前，就先在 Threads 或短影音用內容測試：哪些痛點有人留言、收藏、私訊；再把最有反應的問題做成付費產品。這能避免花很多時間做出市場不想買的東西。</p></div>
+</div>
+</section>
+
+<footer class="footer">整理依據：使用者提供之〈我用 Claude 做了一本电子书，15分钟后开始赚钱了〉逐字稿。此頁為內容摘要與應用建議，不構成投資、法律、稅務或平台營運建議。</footer>
+</main>
+
+<div class="stl-artfoot">
+  <a href="../articles.html">← 回文章列表</a>
+  <a href="../index.html">回首頁</a>
+</div>
+
+</body></html>
