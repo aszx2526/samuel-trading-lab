@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aszx2526.github.io/samuel-trading-lab/sitemap.xml
