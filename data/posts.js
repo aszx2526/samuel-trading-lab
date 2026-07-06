@@ -12,6 +12,15 @@
 
 const posts = [
   {
+    id: "effortlessmemo",
+    title: "努力，但不費力：把重要的事做得更輕、更久、更有效",
+    summary: "核心不是少努力，而是停止把過勞、痛苦與複雜當成成就感。透過不費力的狀態、行動與成果，將重要工作設計成能持續執行、累積經驗並產生複利的系統。",
+    date: "2026-07-07",
+    category: "自我成長",
+    threadUrl: null,
+    readUrl: "articles/effortlessmemo.html"
+  },
+  {
     id: "daytrade250memo",
     title: "日內交易入門：從「想賺錢」轉向可驗證的交易系統",
     summary: "以「每天 1–2 小時、建立能逐步擴大的日內交易流程」為主題。核心不是神奇策略，而是：先定義規則、用 R 倍數驗證期望值、統一每筆風險，最後才思考帳戶規模與金額目標。",
