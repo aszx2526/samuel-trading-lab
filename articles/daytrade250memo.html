@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>日內交易入門｜每日250美元教學中文重點整理</title>
+<style>
+:root{--bg:#0a111b;--panel:#111d2d;--panel2:#17263a;--text:#edf3fb;--muted:#a8b7c8;--line:#2b3e59;--green:#68e0ad;--blue:#72baff;--yellow:#ffd273;--red:#ff8b98}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 88% 0%,rgba(114,186,255,.16),transparent 29%),var(--bg);color:var(--text);font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.78}
+.wrap{max-width:1160px;margin:auto;padding:44px 20px 74px}.hero{padding:44px 40px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,rgba(114,186,255,.12),rgba(104,224,173,.07)),var(--panel)}
+.eyebrow{font-size:.85rem;letter-spacing:.1em;color:var(--green);font-weight:850}h1{font-size:clamp(2rem,5vw,3.55rem);line-height:1.18;margin:10px 0 16px}h2{font-size:1.58rem;margin:48px 0 16px}h3{font-size:1.15rem;margin:0 0 8px}p{margin:8px 0}.lead{font-size:1.13rem;color:#d5e0ec;max-width:900px}
+.grid{display:grid;gap:16px}.two{grid-template-columns:repeat(2,minmax(0,1fr))}.three{grid-template-columns:repeat(3,minmax(0,1fr))}.card{background:rgba(17,29,45,.94);border:1px solid var(--line);border-radius:16px;padding:22px}.tag{display:inline-block;padding:4px 10px;border-radius:999px;background:rgba(114,186,255,.15);color:#c4e1ff;font-size:.83rem;font-weight:800}.num{width:35px;height:35px;border-radius:50%;display:grid;place-items:center;background:rgba(104,224,173,.15);color:#c9ffe4;font-weight:900;margin-bottom:10px}
+.callout{padding:18px 20px;border-left:4px solid var(--yellow);border-radius:9px;background:rgba(255,210,115,.08);color:#ffe9bd}.good{border-left-color:var(--green);background:rgba(104,224,173,.075);color:#d0f9e4}.risk{border-left-color:var(--red);background:rgba(255,139,152,.08);color:#ffdce1}.quote{font-size:1.14rem;padding:21px 23px;border:1px solid rgba(104,224,173,.42);border-radius:16px;background:rgba(104,224,173,.075)}
+ul{padding-left:1.25em;margin:10px 0}li{margin:7px 0}table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel)}th,td{padding:15px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}th{background:var(--panel2);color:#dce8fb}tr:last-child td{border-bottom:0}
+.step{display:grid;grid-template-columns:58px 1fr;gap:15px;padding:19px 0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}.step .n{font-size:1.35rem;font-weight:900;color:var(--green)}.check div{margin:9px 0;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.025)}
+.formula{font-family:ui-monospace,Consolas,"Cascadia Mono",monospace;padding:16px;border-radius:12px;background:#0a1421;border:1px solid var(--line);color:#d5eafd;white-space:pre-wrap}.footer{margin-top:50px;padding-top:19px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+@media(max-width:820px){.wrap{padding:24px 14px 52px}.hero{padding:31px 24px}.two,.three{grid-template-columns:1fr}}
+</style></head><body><main class="wrap">
+<section class="hero"><div class="eyebrow">英文影片繁體中文整理・風控版本</div><h1>日內交易入門：<br>從「想賺錢」轉向可驗證的交易系統</h1><p class="lead">影片以「每天 1–2 小時、建立能逐步擴大的日內交易流程」為主題。核心不是神奇策略，而是：先定義規則、用 R 倍數驗證期望值、統一每筆風險，最後才思考帳戶規模與金額目標。</p></section>
+
+<h2>先說結論</h2><div class="quote"><strong>最值得帶走的不是「每日 250 美元」這個數字，而是這條順序：</strong><br>規則 → 回測／樣本 → 正期望值 → 固定風險 → 小規模實盤 → 再考慮擴大。<br><br>任何跳過前面步驟、直接追求日收入的做法，都會讓交易行為被金錢焦慮帶偏。</div>
+
+<h2>影片的四段架構</h2><div class="grid two">
+<article class="card"><div class="num">1</div><h3>正確看待交易</h3><p>不要用「今天要賺多少」主導每一筆決策；要先建立可衡量的規則與代理目標（proxy goals）。</p></article>
+<article class="card"><div class="num">2</div><h3>選擇交易市場</h3><p>比較股票、期貨、外匯與加密貨幣的交易時間、資金需求、槓桿與限制。</p></article>
+<article class="card"><div class="num">3</div><h3>一套特定策略框架</h3><p>以開盤後的趨勢結構變化、FVG 與 Fibonacci 回撤作為進場條件。</p></article>
+<article class="card"><div class="num">4</div><h3>把系統落地與放大</h3><p>先用回放與回測蒐集 R 倍數資料；確認正期望後，再依可承受風險換算部位與帳戶需求。</p></article></div>
+
+<h2>核心觀念一：不要把日收入當成盤中指令</h2><div class="card"><p>影片批評新手常見流程：看見一套策略 → 立即開帳戶 → 設定「本週賺 1,000 美元」→ 為了達成金額而改變進出場行為。</p><p>它提出替代做法：<strong>代理目標（Proxy Goals）</strong>。把最終獲利目標拆成可以直接控制、可以檢查的行為與數據。</p>
+<table><thead><tr><th>結果導向陷阱</th><th>可控代理目標</th></tr></thead><tbody>
+<tr><td>今天一定要賺 250 美元</td><td>今天只做符合規則的 A 級型態</td></tr>
+<tr><td>本週一定要出金</td><td>本週完成 20 筆符合定義的樣本紀錄</td></tr>
+<tr><td>這筆一定要翻本</td><td>單筆固定 1R；觸發停損就結束</td></tr>
+<tr><td>我要提高勝率</td><td>記錄勝率、平均贏單 R、平均虧單 R 與違規率</td></tr>
+</tbody></table></div>
+
+<h2>核心觀念二：先用 R 倍數衡量策略，不用金額衡量自己</h2><div class="card"><p><strong>1R</strong> 是你每一筆交易預先定義的固定風險。例如每筆最多虧損 100 美元，觸及停損就是 <strong>−1R</strong>；若獲利 300 美元，就是 <strong>+3R</strong>。</p>
+<div class="formula">R 倍數 = 單筆實際損益 ÷ 單筆預定風險
+
+期望值（以 R 表示）=
+勝率 × 平均贏單 R − 敗率 × 平均虧單 R
+
+例：勝率 35%、平均贏單 +3R、平均虧單 −1R
+期望值 = 0.35 × 3 − 0.65 × 1 = +0.40R／每筆</div>
+<p>這代表：即使勝率不高，只要平均獲利大於平均損失，並且系統可重複執行，策略仍可能具備正期望。高勝率也不等於有利潤；若每次賺很小、虧一次卻很大，依然可能長期虧損。</p></div>
+
+<div class="callout"><strong>影片數學示例：</strong>若策略在一段測試期內 30 筆交易共獲得 +15R，想達成的月度金額目標 ÷ +15R，即可估算「理論上」每 1R 需要承擔多少金額風險。這只是一種部位規劃模型；樣本小、回測偏差、交易成本與實盤心理壓力都會讓實際結果不同。</div>
+
+<h2>從金額目標回推風險：正確順序</h2><section class="card">
+<div class="step"><div class="n">01</div><div><strong>先寫規則。</strong><br>明確定義何時可進場、何時無效、停損放哪裡、出場規則與當日最多幾筆。</div></div>
+<div class="step"><div class="n">02</div><div><strong>收集足夠樣本。</strong><br>使用 TradingView 回放、歷史資料或模擬交易，至少記錄數十筆完全依規則的樣本。</div></div>
+<div class="step"><div class="n">03</div><div><strong>計算期望值。</strong><br>計算勝率、平均贏單 R、平均虧單 R、總 R、最大連續虧損與最大回撤。</div></div>
+<div class="step"><div class="n">04</div><div><strong>設定極小的初始 1R。</strong><br>先讓實盤壓力小到你能照規則執行，而不是直接用目標收入倒逼風險。</div></div>
+<div class="step"><div class="n">05</div><div><strong>穩定後才放大。</strong><br>以數據與規則遵守率決定是否擴大，而不是因為某一週爆賺或急需用錢。</div></div></section>
+
+<h2>影片比較的市場類型</h2><table><thead><tr><th>市場</th><th>影片提到的優點</th><th>重要風險／限制</th></tr></thead><tbody>
+<tr><td>股票</td><td>流動性高、規則成熟、概念容易理解。</td><td>交易時段有限；不使用槓桿時，達到特定部位需要較多資金。</td></tr>
+<tr><td>期貨</td><td>交易時段較長、契約化、可用較低資本控制較大名目部位。</td><td>槓桿放大損失；保證金不等於最大損失。</td></tr>
+<tr><td>外匯</td><td>市場大、接近全天運作、初始資金門檻可較低。</td><td>匯率受政策與新聞影響大；監管因地而異。</td></tr>
+<tr><td>加密貨幣</td><td>24/7、資金門檻可低、可做短線或持有。</td><td>交易所、法規、流動性、槓桿、清算與費用風險高。</td></tr>
+</tbody></table>
+
+<div class="risk callout"><strong>槓桿的關鍵澄清：</strong>影片將槓桿描述為可用較少資金建立同等風險部位的工具，這在「停損確實執行」的前提下有其數學意義；但槓桿同時縮短可承受價格波動與清算距離。停損不保證在極端行情、滑價、斷線或流動性不足時完全按預期成交。不要因為保證金低，就誤認交易風險低。</div>
+
+<h2>Prop Firm（考試帳戶）概念整理</h2><div class="grid two"><article class="card"><h3>影片的描述</h3><p>交易者支付評估費，用模擬／受規則限制的帳戶達成獲利目標、避免觸碰最大回撤等規則後，取得可申請出金的資格。</p></article><article class="card"><h3>你要特別確認</h3><ul><li>帳戶是模擬、實盤，或混合模式？</li><li>最大回撤是靜態、移動式、收盤計算或即時追蹤？</li><li>新聞、隔夜、持倉、加倉與出金規則是什麼？</li><li>出金門檻、分潤、月費與違規後重置成本？</li></ul></article></div>
+
+<h2>影片策略框架：開盤後 CHoCH + FVG + Fib</h2><div class="card"><p>以下是影片介紹的<strong>個人策略框架</strong>，不是已被證明適合所有市場與交易者的通用系統：</p><table><thead><tr><th>步驟</th><th>影片定義</th><th>交易者需要補上的規格</th></tr></thead><tbody>
+<tr><td>1. 鎖定交易時段</td><td>以紐約開盤為例，等待當日時段開始。</td><td>你的 MNQ 時段、禁止交易時段、重大數據前後規則。</td></tr>
+<tr><td>2. CHoCH（結構改變）</td><td>原本低點／高點延續的結構被突破，出現潛在趨勢改變。</td><td>指定週期、以收盤或影線判定、最低波動幅度。</td></tr>
+<tr><td>3. FVG（公平價值缺口）</td><td>三根 K 線間留下未重疊區域，代表動能區。</td><td>缺口最小尺寸、是否允許部分回補、只取第一個或可取多個。</td></tr>
+<tr><td>4. Fib 50–61.8 區</td><td>尋找 FVG 與回撤區間重疊作為篩選。</td><td>Fib 起終點定義、誤差範圍、不同波動日是否調整。</td></tr>
+<tr><td>5. 進場與停損</td><td>價格回到 FVG 中點進場；停損放在形成缺口 K 棒外側。</td><td>限價／市價規則、距離取消規則、停損緩衝 tick。</td></tr>
+<tr><td>6. 部位管理</td><td>突破前一 swing 後降至保本；目標約 3–4R。</td><td>何時移保本、是否分批、保本後頻繁被洗掉的統計結果。</td></tr>
+</tbody></table></div>
+
+<h2>策略白話流程</h2><div class="good callout"><strong>空方版本：</strong>開盤後先確認上漲結構被破壞 → 出現向下動能造成的 FVG → FVG 位於該波段 Fib 的 50–61.8% 回撤附近 → 等價格回抽 FVG 中點做空 → 停損放在形成動能 K 棒上方 → 價格跌破關鍵 swing 後依規則移保本 → 目標約 3–4R。<br><br><strong>多方版本完全反向。</strong></div>
+
+<h2>與你的「破底翻」邏輯的交集</h2><div class="grid two"><article class="card"><span class="tag">共同點</span><h3>都在找慣性改變</h3><ul><li>先有既有趨勢或下跌結構。</li><li>出現不再延續原方向的證據。</li><li>等待回踩／確認，而不是第一次反彈就追。</li><li>利用結構點作為失效與停損依據。</li></ul></article><article class="card"><span class="tag">不同點</span><h3>影片偏 ICT 結構工具組合</h3><ul><li>它把 CHoCH、FVG 與 Fib 50–61.8 重疊設定為硬篩選。</li><li>你的破底翻更重視「跌不下去、反應速度、前低突破」與短週期結構。</li><li>可把 FVG／Fib 當成額外資料欄位測試，不要直接取代你已在觀察的有效訊號。</li></ul></article></div>
+
+<h2>建議你如何測試，而不是直接相信</h2><section class="card"><div class="step"><div class="n">A</div><div><strong>先不交易，只標記。</strong><br>連續 20–30 個交易日，標記你的破底翻是否同時出現 CHoCH、FVG、Fib 重疊。</div></div><div class="step"><div class="n">B</div><div><strong>拆成分組比較。</strong><br>比較「只有破底翻」、「破底翻 + CHoCH」、「破底翻 + CHoCH + FVG」、「全部條件」的勝率、平均 R、最大不利波動與持有時間。</div></div><div class="step"><div class="n">C</div><div><strong>測保本規則。</strong><br>統計在何種條件移到 BE 最合理：突破前一 swing、達 +1R、達 +1.5R，或不移保本直接分批。</div></div><div class="step"><div class="n">D</div><div><strong>最後才納入系統。</strong><br>只有在足夠樣本中改善期望值、回撤或執行一致性時，才把條件寫進正式規則。</div></div></section>
+
+<h2>每日 1–2 小時交易的正確版本</h2><div class="card"><div class="check"><div>□ 開盤前：檢查重大數據、日內區間、最大風險與可交易時段。</div><div>□ 盤中：只等已定義的 A 級型態，不因無聊增加交易。</div><div>□ 每筆：先算好停損距離，再由固定 1R 回推口數。</div><div>□ 結束：觸發日損、連續違規或時段結束後，停止「找機會」。</div><div>□ 收盤後：記錄是否符合規則、結果多少 R、錯在哪個環節。</div></div></div>
+
+<h2>最關鍵的風險提醒</h2><div class="risk callout"><ul><li>「每天 250 美元」是影片的行銷定位與個人示例，不是合理或可保證的初學者目標。</li><li>影片提到 1:3、1:4 與較低勝率仍可獲利，數學上可能成立，但前提是有足夠、未過度擬合的樣本，且成交滑價與費用沒有破壞期望值。</li><li>FVG、Fib、CHoCH 都有主觀定義空間；未寫成規則前，很容易出現「事後看都很清楚」的偏誤。</li><li>高槓桿與 Prop Firm 都不是低風險捷徑。先保護最大可承受損失，再談資本效率。</li></ul></div>
+
+<h2>你可直接採用的最小行動版本</h2><div class="quote"><strong>下週只做一件事：</strong>把目前的破底翻交易，每一筆都以 R 記錄，而不是只記美元。<br><br>記錄欄位：型態是否完整、進場原因、停損 tick、口數、最終 R、最大浮動不利、是否有 FVG／CHoCH、是否違規。<br><br>累積 30 筆後，再看：真正的勝率、平均贏單、平均虧單，以及哪種條件能提高期望值。</div>
+
+<div class="footer"><strong>來源：</strong>〈How To Start Day Trading To Make $250/Day [Full Tutorial]〉逐字稿，已翻譯與整理為繁體中文。<br>本文件僅供教育與研究用途，不構成任何投資建議、交易指示或獲利保證。策略、商品規格、槓桿與 Prop Firm 規則皆應以實際交易平台與官方規則為準。</div>
+</main></body></html>

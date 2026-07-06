@@ -12,6 +12,15 @@
 
 const posts = [
   {
+    id: "daytrade250memo",
+    title: "日內交易入門：從「想賺錢」轉向可驗證的交易系統",
+    summary: "以「每天 1–2 小時、建立能逐步擴大的日內交易流程」為主題。核心不是神奇策略，而是：先定義規則、用 R 倍數驗證期望值、統一每筆風險，最後才思考帳戶規模與金額目標。",
+    date: "2026-07-07",
+    category: "交易紀律",
+    threadUrl: null,
+    readUrl: "articles/daytrade250memo.html"
+  },  
+  {
     id: "ai-digital-product",
     title: "用 AI 做數位產品變現：從內容到第一筆銷售",
     summary: "把「賣解決方案而不是賣資訊」的影片重點,拆成選題、製作、導流的可執行流程,並套用到交易工具與內容變現。",
